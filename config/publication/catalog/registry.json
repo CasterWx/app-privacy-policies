@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "apps": [
+    {
+      "slug": "starveil-theatre",
+      "name": "星幕剧场 · Starveil Theatre",
+      "source": "content/mobile/apps/legal/privacy/07d1a4e861b8e7b5/policy.json",
+      "publicPath": "documents/mobile/apps/legal/privacy/07d1a4e861b8e7b5"
+    }
+  ]
+}
