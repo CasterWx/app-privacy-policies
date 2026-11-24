@@ -12,6 +12,12 @@
       "name": "素框 · FramePure",
       "source": "content/mobile/apps/legal/privacy/f4c8e2a19b6d3057/policy.json",
       "publicPath": "documents/mobile/apps/legal/privacy/f4c8e2a19b6d3057"
+    },
+    {
+      "slug": "bodytrace",
+      "name": "体迹 · BodyTrace",
+      "source": "content/mobile/apps/legal/privacy/c8a3e71b49d2f605/policy.json",
+      "publicPath": "documents/mobile/apps/legal/privacy/c8a3e71b49d2f605"
     }
   ]
 }
