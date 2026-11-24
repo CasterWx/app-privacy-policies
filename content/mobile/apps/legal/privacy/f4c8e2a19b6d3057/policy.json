@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "slug": "framepure",
+  "effectiveDate": "2026-11-25",
+  "developer": "Wang xiaohu",
+  "supportUrl": "https://ai-topic.cn",
+  "defaultLanguage": "zh-Hans",
+  "languages": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "appName": "素框 FramePure",
+      "title": "隐私政策",
+      "dateLabel": "生效与更新日期",
+      "developerLabel": "开发者",
+      "supportLabel": "技术支持与隐私联系",
+      "intro": "本政策适用于 Wang xiaohu 提供的 iOS / iPadOS 应用「素框 FramePure」（含系统相册分享扩展与快捷指令操作）。本政策说明应用如何在设备本地处理你的照片与 EXIF 元数据、可选的城市名提取与 iCloud 预设同步如何工作、应用内购买如何处理，以及你如何管理自己的信息。",
+      "summary": "无需注册账号。所有照片解码、EXIF 读取、画框渲染与 GPS 隐私擦除均在你的设备本地离线完成，开发者不运营图片服务器，不上传、不收集、不出售你的照片，亦不含广告或跨应用追踪。",
+      "sections": [
+        {
+          "title": "1. 照片读取与本地渲染",
+          "paragraphs": [
+            "当你通过系统照片选择器、拖拽导入、系统相册「分享」扩展或 Apple 快捷指令主动选择照片（含 JPEG、HEIC、RAW/DNG 与实况 Live Photo）时，应用仅在你的设备本地读取所选图像的像素、Display P3 广色域、Apple HDR 增益图与 EXIF/TIFF 光学参数，用于实时预览和无损生成相框成片。",
+            "所有图像处理均在设备本地内存与临时缓存中完成，照片不会上传至开发者服务器。当你点击保存时，应用经由系统照片图库权限将成片写入你的本地相册，并自动清理渲染过程中产生的临时文件。"
+          ]
+        },
+        {
+          "title": "2. GPS 定位擦除与可选的安全城市名提取",
+          "paragraphs": [
+            "在默认开启「导出自动抹除 GPS 与设备隐私」的状态下，应用会审计并从导出成片中剥离精确 GPS 经纬度坐标、机身与镜头序列号、持有人姓名及厂商私有 MakerNote，帮助你在社交平台分享作品时避免暴露家庭住址或设备标识。",
+            "应用不请求设备实时位置权限，也不追踪你的行踪。仅当你进入 EXIF 编辑页并主动点击「仅提取安全城市名作题注」时，应用才会将当前照片自身 EXIF 中的经纬度交给 Apple 系统 CoreLocation 反向地理编码服务，以换取城市级地名（例如城市名称）供你作为画面题注使用；此过程不会向开发者发送坐标，也不会保存位置历史。Apple 的地理编码服务适用 Apple 隐私政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "3. 本地偏好、手写签名与个人 iCloud 预设同步",
+          "paragraphs": [
+            "应用在设备本地及共享应用组（App Group）中保存你的常用模板收藏、当前排版配置、自定义预设及你绘制的透明手写签名图片，以便主应用与系统相册分享扩展保持一致体验。",
+            "应用支持使用 Apple 系统提供的个人 iCloud 键值存储（NSUbiquitousKeyValueStore）在你的 iPhone、iPad 与 Mac 之间同步你保存的画框预设配置。这些配置仅保存在你自己的 Apple 账户 iCloud 空间内，不经过开发者服务器，开发者无法读取或访问。你可以在系统 iCloud 设置中随时关闭同步，或在应用内删除预设与签名图片。"
+          ]
+        },
+        {
+          "title": "4. 购买与恢复",
+          "paragraphs": [
+            "免费版提供 3 套经典白框、单张高清无损导出与完整 GPS 隐私擦除功能。一次非消耗型应用内购买（素框 Pro 永久买断）可解锁全部 30 套画廊与胶片模板、九宫格批量出片、实况 Live Photo 套框、画册拼图及手写签名等功能。",
+            "所有购买、付款、恢复与退款/撤销验证均由 Apple 的 App Store / StoreKit 2 服务处理。开发者不会获取你的银行卡信息或 Apple 账户密码。Apple 可能按其服务规则处理交易数据并向开发者提供匿名统计与财务报告，适用 Apple 隐私政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "5. 主动分享与外部服务",
+          "paragraphs": [
+            "当你点击分享按钮将渲染后的成片发送至第三方社交应用或通过隔空投送分享时，内容由你主动选定并交由系统分享面板传递给目标应用，后续处理适用接收方的隐私规则。",
+            "本应用不集成任何广告 SDK、行为分析埋点或跨应用追踪框架，不出售个人信息。Apple 可能根据你的设备诊断与分析设置向开发者提供匿名崩溃与性能报告。本隐私网页由 GitHub Pages 托管，不含广告、分析脚本或我们设置的 Cookie；访问网页时 GitHub 可能为保障服务安全记录基础请求日志，适用 GitHub 隐私声明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。"
+          ]
+        },
+        {
+          "title": "6. 数据保存、删除与联系",
+          "paragraphs": [
+            "你的预设、收藏与签名图片保留在你的设备存储及个人 iCloud 空间内；在系统中删除应用会移除设备上的本地数据，你也可随时在应用内删除自定义预设和手写签名。开发者没有服务器端备份，无法代你找回或删除设备上的本地数据。",
+            "如果你通过技术支持渠道联系开发者，我们仅在你处理咨询或隐私请求所需的合理期限内使用你主动提供的联系信息与说明，请勿发送隐私原图、密码或完整支付凭据。如有任何隐私疑问或请求，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「素框 FramePure」。"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "English",
+      "appName": "FramePure",
+      "title": "Privacy Policy",
+      "dateLabel": "Effective and updated",
+      "developerLabel": "Developer",
+      "supportLabel": "Support and privacy contact",
+      "intro": "This policy applies to FramePure (素框 FramePure), an iOS and iPadOS app provided by Wang xiaohu, including its Photos Share Extension and Apple Shortcuts actions. It explains how the app processes photos and EXIF metadata on your device, how optional city-name lookup and iCloud preset sync work, how in-app purchases are handled, and how you can manage your information.",
+      "summary": "No account is required. All photo decoding, EXIF parsing, framing, and GPS metadata scrubbing run 100% locally on your device. The developer operates no photo servers, does not upload or sell your photos, and includes zero ads or cross-app tracking.",
+      "sections": [
+        {
+          "title": "1. Photo access and on-device rendering",
+          "paragraphs": [
+            "When you choose photos or Live Photos via the system photo picker, drag and drop, the Photos Share Extension, or Apple Shortcuts (including JPEG, HEIC, and RAW/DNG), FramePure reads image pixels, Display P3 wide-gamut profiles, Apple HDR Gain Maps, and EXIF/TIFF optical parameters strictly on your device to preview and render framed exports.",
+            "All rendering executes locally in device memory and temporary storage. Your photos are never uploaded to a developer server. When you save an export, the app writes the finished image to your Photos library under system permission and clears temporary working files."
+          ]
+        },
+        {
+          "title": "2. GPS scrubbing and optional safe city-name lookup",
+          "paragraphs": [
+            "With GPS privacy scrubbing enabled by default, FramePure inspects and strips exact GPS latitude/longitude coordinates, camera and lens serial numbers, owner names, and proprietary MakerNotes from exported files so sharing photography online does not leak your home address or hardware identifiers.",
+            "FramePure never requests live device location permissions and does not track your movements. Only if you explicitly tap the safe city-name caption action inside the EXIF editor does the app pass the selected photo’s embedded EXIF coordinates to Apple’s CoreLocation reverse-geocoding service to retrieve a city-level name for your caption. Coordinates are never sent to the developer or stored as location history. Apple’s privacy policy governs its geocoding service: https://www.apple.com/legal/privacy/."
+          ]
+        },
+        {
+          "title": "3. Local preferences, signatures and personal iCloud sync",
+          "paragraphs": [
+            "FramePure stores your favorite frame templates, active framing layout, saved presets, and any handwritten transparent signature image locally and inside the app’s shared App Group container so the main app and Share Extension stay in sync.",
+            "The app uses Apple’s personal iCloud key-value storage (NSUbiquitousKeyValueStore) to sync your saved frame presets across your own iPhone, iPad, and Mac. This data resides exclusively in your personal Apple iCloud account and is inaccessible to the developer. You can disable iCloud sync in iOS Settings or delete saved presets and signatures inside the app at any time."
+          ]
+        },
+        {
+          "title": "4. Purchases and restoration",
+          "paragraphs": [
+            "The free tier includes 3 classic white gallery frames, lossless single-photo export, and full GPS metadata scrubbing with zero ads. One non-consumable lifetime in-app purchase (FramePure Pro) unlocks all 30 templates, 9-grid batch export, Live Photo framing, diptych/contact sheet layouts, editorial typography, and handwritten signature stamps.",
+            "All payment processing, entitlement verification, restoration, and revocation checks are handled by Apple App Store / StoreKit 2. The developer never receives payment card details or your Apple Account password. Apple’s privacy policy applies to its commerce services: https://www.apple.com/legal/privacy/."
+          ]
+        },
+        {
+          "title": "5. User-initiated sharing and third-party services",
+          "paragraphs": [
+            "When you share an exported image through the system share sheet to another app or AirDrop, the destination app’s own privacy policy governs how it handles the shared file.",
+            "FramePure integrates no advertising networks, behavioral analytics SDKs, or cross-app tracking tools, and never sells personal data. Apple may provide aggregated crash and performance diagnostics according to your device settings. This policy page is hosted on GitHub Pages with no ads, scripts, or cookies set by us; GitHub may process standard server logs under its privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement."
+          ]
+        },
+        {
+          "title": "6. Retention, deletion and contact",
+          "paragraphs": [
+            "Presets, favorites, and signature images remain in your device storage and personal iCloud storage until you delete them in the app or uninstall the app from iOS. The developer keeps no server-side copies and cannot remotely access or recover local data.",
+            "If you contact support, we use only the details you voluntarily provide to respond to your inquiry or privacy request. Please do not send private original photos, passwords, or payment credentials. Contact Wang xiaohu via https://ai-topic.cn and reference FramePure."
+          ]
+        }
+      ]
+    },
+    "zh-Hant": {
+      "label": "繁體中文",
+      "appName": "素框 FramePure",
+      "title": "隱私權政策",
+      "dateLabel": "生效與更新日期",
+      "developerLabel": "開發者",
+      "supportLabel": "技術支援與隱私聯絡",
+      "intro": "本政策適用於 Wang xiaohu 提供的 iOS / iPadOS 應用程式「素框 FramePure」（含系統照片分享延伸功能與捷徑動作）。本政策說明應用程式如何在裝置本機處理你的照片與 EXIF 中繼資料、選用的安全城市名稱擷取與 iCloud 預設同步運作方式，以及購買與資料管理方式。",
+      "summary": "無須註冊帳號。所有照片解碼、EXIF 讀取、畫框算繪與 GPS 隱私清除皆在你的裝置本機離線完成；開發者不營運圖片伺服器、不上傳或販售你的照片，且不含廣告或跨 App 追蹤。",
+      "sections": [
+        {
+          "title": "1. 照片讀取與本機算繪",
+          "paragraphs": [
+            "當你透過系統照片選擇器、拖放匯入、系統照片分享延伸功能或 Apple 捷徑主動選取照片（含 JPEG、HEIC、RAW/DNG 與原況照片 Live Photo）時，應用程式僅於你的裝置本機讀取影像像素、Display P3 廣色域、Apple HDR 增益圖與 EXIF/TIFF 光學參數，用於即時預覽與無損匯出。",
+            "所有影像處理皆於本機記憶體與暫存區完成，照片絕不會上傳至開發者伺服器。儲存時僅依系統相簿權限寫入你的照片圖庫，並清除暫存檔案。"
+          ]
+        },
+        {
+          "title": "2. GPS 定位清除與選用的安全城市名稱擷取",
+          "paragraphs": [
+            "預設啟用隱私淨化時，匯出成片會自動剝離精確 GPS 經緯度、機身與鏡頭序號、持有人姓名及廠商私有 MakerNote，避免於社群分享時洩露住址或裝置資訊。",
+            "應用程式不要求裝置即時定位權限，亦不追蹤行蹤。僅當你在 EXIF 編輯頁主動點擊「僅擷取安全城市名稱作為題註」時，應用程式才會將該照片 EXIF 中的經緯度交由 Apple 系統 CoreLocation 反向地理編碼服務換取城市級名稱，不會傳送給開發者或保留位置紀錄。Apple 服務適用其隱私權政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "3. 本機偏好、手寫簽名與個人 iCloud 預設同步",
+          "paragraphs": [
+            "應用程式於裝置本機及 App Group 共享容器保存收藏模板、排版設定、自訂預設與透明手寫簽名圖檔，供主應用程式與分享延伸功能一致使用。",
+            "應用程式支援透過 Apple 個人 iCloud 鍵值儲存（NSUbiquitousKeyValueStore）在你的裝置間同步自訂畫框預設。資料僅存於你個人的 iCloud 帳號，開發者無法存取。你可隨時於系統設定關閉同步，或在應用程式內刪除預設與簽名。"
+          ]
+        },
+        {
+          "title": "4. 購買與回復",
+          "paragraphs": [
+            "免費版永久提供 3 套經典白框、單張無損匯出與完整 GPS 隱私清除。單次非消耗型 App 內購買（素框 Pro 永久買斷）可解鎖全部 30 套模板、九宮格批次出片、原況照片套框、畫冊拼圖與手寫簽名。",
+            "所有付款、權益驗證、回復與退款撤銷狀態皆由 Apple App Store / StoreKit 2 處理，開發者不接觸付款卡資料或 Apple 帳號密碼，適用 Apple 隱私權政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "5. 主動分享與第三方服務",
+          "paragraphs": [
+            "當你透過系統分享面板將匯出圖片分享至其他應用程式或 AirDrop 時，後續處理適用接收方服務之隱私規則。",
+            "本應用程式不含廣告 SDK、行為分析追蹤器或跨 App 追蹤工具，不販售個人資料。本隱私網頁託管於 GitHub Pages，不含廣告、分析指令碼或我們設定的 Cookie；連線紀錄適用 GitHub 隱私聲明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。"
+          ]
+        },
+        {
+          "title": "6. 保存、刪除與聯絡",
+          "paragraphs": [
+            "預設、收藏與簽名圖檔保存在你的裝置與個人 iCloud 空間，刪除應用程式或於 App 內手動刪除即可移除。開發者無伺服器端備份，無法代為存取或復原。",
+            "如對隱私處理有任何疑問或請求，請透過技術支援網址 https://ai-topic.cn 聯絡開發者 Wang xiaohu，並註明涉及「素框 FramePure」。"
+          ]
+        }
+      ]
+    }
+  }
+}
