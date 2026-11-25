@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="无需注册账号，100% 端侧本地运行。你的应用锁定选择、相机姿态与户外草地识别、步数统计、NFC 标签绑定、打卡历史与可选实拍标本照片均严格在你的 iPhone 本地处理与存储；开发者不运营任何用户服务器，不收集、不上传、不出售你的任何个人数据，亦不含广告或跨应用追踪。">
+<title>碰草门禁 · TouchGate — 隐私政策</title>
+<link rel="stylesheet" href="../../../../../../style.css">
+</head>
+<body>
+<header class="site-header"><span>碰草门禁 · TouchGate</span><span>Privacy / 隐私</span></header>
+<main id="main">
+<nav class="languages" aria-label="Language / 语言"><a href="zh-Hans.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">简体中文</a> <a href="en.html" lang="en" hreflang="en">English</a> <a href="zh-Hant.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a> <a href="ja.html" lang="ja" hreflang="ja">日本語</a></nav>
+<div class="eyebrow">碰草门禁 · TouchGate</div>
+<h1>隐私政策</h1>
+<p class="meta">生效与更新日期: <time datetime="2026-11-26">2026-11-26</time><br>开发者: Wang xiaohu</p>
+<p class="lead">本政策适用于 Wang xiaohu 提供的 iOS 应用「碰草门禁（TouchGate）」（含桌面小组件、灵动岛以及 Apple 屏幕使用时间监控与拦截扩展）。本政策说明应用如何在设备本地使用屏幕使用时间权限、端侧相机视觉检测、运动步数传感、近场标签读取与本地通知，以及你如何管理或删除自己的数据。</p>
+<aside class="summary">无需注册账号，100% 端侧本地运行。你的应用锁定选择、相机姿态与户外草地识别、步数统计、NFC 标签绑定、打卡历史与可选实拍标本照片均严格在你的 iPhone 本地处理与存储；开发者不运营任何用户服务器，不收集、不上传、不出售你的任何个人数据，亦不含广告或跨应用追踪。</aside>
+<section aria-labelledby="section-1"><h2 id="section-1">1. 本地记录、规则设置与系统扩展共享</h2><p>你在应用内配置的门禁规则（运动类型、次数或步数目标、临时放行时长、阶梯加码、作息时段、紧急跳过次数）、打卡记录、成就解锁状态以及已绑定的物理锚点名称与编号，均仅保存在你的设备本地存储及系统共享应用组（App Group）容器中，以便主应用、桌面小组件、灵动岛与屏幕使用时间扩展保持一致状态。</p><p>本应用不提供云端账号体系，所有数据均不经过开发者服务器。</p></section><section aria-labelledby="section-2"><h2 id="section-2">2. Apple 屏幕使用时间（FamilyControls）权限</h2><p>仅在你主动授权 Apple「屏幕使用时间（FamilyControls / ManagedSettings / DeviceActivity）」权限并自主选取应用或分类后，碰草门禁才会对所选应用施加本地遮罩拦截，并在你完成物理挑战后执行临时放行与到期自动重锁。</p><p>依据 Apple 系统隐私机制，所选应用均以系统加密不透明令牌（Opaque Token）形式仅存于本机，开发者无法读取你手机上安装的完整应用清单或使用时长明细，更不会向外部传输任何屏幕使用时间数据。你可随时在系统「设置 → 屏幕使用时间」中撤回授权。</p></section><section aria-labelledby="section-3"><h2 id="section-3">3. 端侧相机、户外实拍标本与防作弊校验</h2><p>当你主动开始「运动计数（深蹲/开合跳/高抬腿）」、「出门摸草（草地与晴空活体识别）」或「条形码扫码」挑战时，相机视频帧仅在你的设备内存中使用 Apple Vision 框架进行实时本地分析，绝不录像、绝不上传至任何服务器。</p><p>在「出门摸草」挑战通过时，应用可在你的设备应用沙盒本地保存一张当前实景压缩照片用于展示「摸草标本墙」与由你主动触发的「摸草证明卡」分享。你可以随时在「规则 → 清空本地记录」中一键删除全部本地记录与标本照片。</p></section><section aria-labelledby="section-4"><h2 id="section-4">4. 运动与健身（步数与微动）及近场标签（NFC）</h2><p>当你使用「起身走步」解锁或「出门摸草」防翻拍校验时，应用仅在挑战进行期间通过 Apple CoreMotion（CMPedometer / CMMotionManager）读取设备本地实时步数与手持自然微动信号，挑战结束立即停止采集，不读取历史健康档案，亦不上传任何传感器数据。</p><p>当你主动绑定或轻触 NFC 门禁贴纸时，应用仅通过 Apple CoreNFC 在本地读取标签唯一标识并与你主动绑定的本地清单比对，不向外部传输标签信息。</p></section><section aria-labelledby="section-5"><h2 id="section-5">5. 本地提醒与分享卡片</h2><p>当你开启睡前/专注时段提醒或触发拦截通知时，提醒由设备本地通知中心（UNUserNotificationCenter）生成，不依赖远程推送服务器，亦不收集设备推送令牌。</p><p>当你主动点击分享成就收藏卡、自律周报小票或摸草证明卡时，图片由设备本地实时渲染并通过 iOS 系统分享面板交由你自主选择的目标应用处理。</p></section><section aria-labelledby="section-6"><h2 id="section-6">6. 第三方 SDK、数据删除与联系我们</h2><p>本应用不集成任何广告 SDK、第三方统计埋点或跨应用追踪框架，不出售或共享个人信息。Apple 可能依据你的设备诊断设置向开发者提供匿名崩溃与性能报告。本隐私网页托管于 GitHub Pages，不含广告、脚本或我们设置的 Cookie；访问网页时 GitHub 可能记录基础访问安全日志，适用 GitHub 隐私声明：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>。</p><p>你随时可在应用「规则」页一键清空全部本地历史记录与标本照片，卸载应用可彻底移除设备本地数据。如有任何隐私疑问或支持需求，请通过技术支持网址 <a href="https://ai-topic.cn">https://ai-topic.cn</a> 联系开发者 Wang xiaohu，并注明涉及「碰草门禁（TouchGate）」。</p></section>
+<footer><a href="https://ai-topic.cn">技术支持与隐私联系</a><p>碰草门禁 · TouchGate · Wang xiaohu</p></footer>
+</main></body>
+</html>

@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "slug": "touchgate",
+  "effectiveDate": "2026-11-26",
+  "developer": "Wang xiaohu",
+  "supportUrl": "https://ai-topic.cn",
+  "defaultLanguage": "zh-Hans",
+  "languages": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "appName": "碰草门禁 · TouchGate",
+      "title": "隐私政策",
+      "dateLabel": "生效与更新日期",
+      "developerLabel": "开发者",
+      "supportLabel": "技术支持与隐私联系",
+      "intro": "本政策适用于 Wang xiaohu 提供的 iOS 应用「碰草门禁（TouchGate）」（含桌面小组件、灵动岛以及 Apple 屏幕使用时间监控与拦截扩展）。本政策说明应用如何在设备本地使用屏幕使用时间权限、端侧相机视觉检测、运动步数传感、近场标签读取与本地通知，以及你如何管理或删除自己的数据。",
+      "summary": "无需注册账号，100% 端侧本地运行。你的应用锁定选择、相机姿态与户外草地识别、步数统计、NFC 标签绑定、打卡历史与可选实拍标本照片均严格在你的 iPhone 本地处理与存储；开发者不运营任何用户服务器，不收集、不上传、不出售你的任何个人数据，亦不含广告或跨应用追踪。",
+      "sections": [
+        {
+          "title": "1. 本地记录、规则设置与系统扩展共享",
+          "paragraphs": [
+            "你在应用内配置的门禁规则（运动类型、次数或步数目标、临时放行时长、阶梯加码、作息时段、紧急跳过次数）、打卡记录、成就解锁状态以及已绑定的物理锚点名称与编号，均仅保存在你的设备本地存储及系统共享应用组（App Group）容器中，以便主应用、桌面小组件、灵动岛与屏幕使用时间扩展保持一致状态。",
+            "本应用不提供云端账号体系，所有数据均不经过开发者服务器。"
+          ]
+        },
+        {
+          "title": "2. Apple 屏幕使用时间（FamilyControls）权限",
+          "paragraphs": [
+            "仅在你主动授权 Apple「屏幕使用时间（FamilyControls / ManagedSettings / DeviceActivity）」权限并自主选取应用或分类后，碰草门禁才会对所选应用施加本地遮罩拦截，并在你完成物理挑战后执行临时放行与到期自动重锁。",
+            "依据 Apple 系统隐私机制，所选应用均以系统加密不透明令牌（Opaque Token）形式仅存于本机，开发者无法读取你手机上安装的完整应用清单或使用时长明细，更不会向外部传输任何屏幕使用时间数据。你可随时在系统「设置 → 屏幕使用时间」中撤回授权。"
+          ]
+        },
+        {
+          "title": "3. 端侧相机、户外实拍标本与防作弊校验",
+          "paragraphs": [
+            "当你主动开始「运动计数（深蹲/开合跳/高抬腿）」、「出门摸草（草地与晴空活体识别）」或「条形码扫码」挑战时，相机视频帧仅在你的设备内存中使用 Apple Vision 框架进行实时本地分析，绝不录像、绝不上传至任何服务器。",
+            "在「出门摸草」挑战通过时，应用可在你的设备应用沙盒本地保存一张当前实景压缩照片用于展示「摸草标本墙」与由你主动触发的「摸草证明卡」分享。你可以随时在「规则 → 清空本地记录」中一键删除全部本地记录与标本照片。"
+          ]
+        },
+        {
+          "title": "4. 运动与健身（步数与微动）及近场标签（NFC）",
+          "paragraphs": [
+            "当你使用「起身走步」解锁或「出门摸草」防翻拍校验时，应用仅在挑战进行期间通过 Apple CoreMotion（CMPedometer / CMMotionManager）读取设备本地实时步数与手持自然微动信号，挑战结束立即停止采集，不读取历史健康档案，亦不上传任何传感器数据。",
+            "当你主动绑定或轻触 NFC 门禁贴纸时，应用仅通过 Apple CoreNFC 在本地读取标签唯一标识并与你主动绑定的本地清单比对，不向外部传输标签信息。"
+          ]
+        },
+        {
+          "title": "5. 本地提醒与分享卡片",
+          "paragraphs": [
+            "当你开启睡前/专注时段提醒或触发拦截通知时，提醒由设备本地通知中心（UNUserNotificationCenter）生成，不依赖远程推送服务器，亦不收集设备推送令牌。",
+            "当你主动点击分享成就收藏卡、自律周报小票或摸草证明卡时，图片由设备本地实时渲染并通过 iOS 系统分享面板交由你自主选择的目标应用处理。"
+          ]
+        },
+        {
+          "title": "6. 第三方 SDK、数据删除与联系我们",
+          "paragraphs": [
+            "本应用不集成任何广告 SDK、第三方统计埋点或跨应用追踪框架，不出售或共享个人信息。Apple 可能依据你的设备诊断设置向开发者提供匿名崩溃与性能报告。本隐私网页托管于 GitHub Pages，不含广告、脚本或我们设置的 Cookie；访问网页时 GitHub 可能记录基础访问安全日志，适用 GitHub 隐私声明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。",
+            "你随时可在应用「规则」页一键清空全部本地历史记录与标本照片，卸载应用可彻底移除设备本地数据。如有任何隐私疑问或支持需求，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「碰草门禁（TouchGate）」。"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "English",
+      "appName": "TouchGate",
+      "title": "Privacy Policy",
+      "dateLabel": "Effective and updated",
+      "developerLabel": "Developer",
+      "supportLabel": "Support and privacy contact",
+      "intro": "This policy applies to TouchGate (碰草门禁), an iOS app provided by Wang xiaohu, including its Widgets, Live Activities, and Apple Screen Time monitoring and shield extensions. It explains how the app uses Screen Time permissions, on-device camera vision checks, step and motion sensors, NFC tag reading, and local notifications strictly on your device, and how you can manage or delete your data.",
+      "summary": "No account is required and 100% of processing runs strictly on your iPhone. Your app shield selections, camera pose and outdoor nature verification, step counts, bound NFC/barcode anchors, challenge history, and optional local grass specimen photos stay exclusively on your device. The developer operates no user servers, collects or sells zero personal data, and includes zero ads or cross-app tracking.",
+      "sections": [
+        {
+          "title": "1. On-device preferences, logs, and extension sync",
+          "paragraphs": [
+            "Your gate rules (exercise type, rep or step targets, temporary pass duration, escalating friction, bedtime/work schedules, emergency skip count), challenge logs, achievement unlock progress, and bound physical anchor labels are stored exclusively on your device and in its Apple App Group container so the main app, Widgets, Live Activities, and Screen Time extensions stay synchronized.",
+            "TouchGate has no user accounts or cloud backend; your data never passes through developer servers."
+          ]
+        },
+        {
+          "title": "2. Apple Screen Time (FamilyControls) access",
+          "paragraphs": [
+            "Only after you explicitly authorize Apple Screen Time (FamilyControls, ManagedSettings, and DeviceActivity) and select apps or categories does TouchGate apply local shields, grant temporary passes after you finish a physical challenge, and automatically re-lock when your pass expires.",
+            "Per Apple’s privacy-preserving architecture, selected apps are stored solely as opaque system tokens on-device. The developer cannot read your installed app list or Screen Time analytics, and no Screen Time data is ever transmitted externally. You can revoke permission anytime in iOS Settings → Screen Time."
+          ]
+        },
+        {
+          "title": "3. On-device camera, outdoor specimen photos, and anti-spoof checks",
+          "paragraphs": [
+            "When you start an Exercise challenge (squats, jumping jacks, or high knees), an Outdoor Touch Grass challenge (live daylight grass/sky verification), or a Barcode scan, camera frames are analyzed strictly in volatile memory on your iPhone using Apple Vision. Video is never recorded or uploaded to any server.",
+            "When you pass an Outdoor Touch Grass challenge, the app may save a compressed local snapshot inside its private sandbox solely to display in your Specimen Wall and optional Touch Grass Proof share card. You can delete all local records and saved specimen photos anytime via Rules → Clear Local History."
+          ]
+        },
+        {
+          "title": "4. Motion & Fitness (steps and micro-motion) and NFC tags",
+          "paragraphs": [
+            "During a Stand & Walk challenge or Outdoor anti-spoof verification, TouchGate uses Apple CoreMotion (CMPedometer and CMMotionManager) strictly while the challenge is active to count live steps and verify natural handheld micro-motion. Collection stops immediately when the challenge ends, and no sensor data leaves your device.",
+            "When you bind or tap a physical NFC sticker, TouchGate reads the tag identifier locally via Apple CoreNFC solely to match against your own local anchor list."
+          ]
+        },
+        {
+          "title": "5. Local notifications and shareable cards",
+          "paragraphs": [
+            "Optional schedule reminders and shield prompt notifications are generated locally via UNUserNotificationCenter with no remote push server or push token collection.",
+            "When you choose to share an Achievement Card, Weekly Discipline Receipt, or Touch Grass Proof Card, the image is rendered on-device and handed to the standard iOS Share Sheet only upon your action."
+          ]
+        },
+        {
+          "title": "6. Third-party SDKs, data deletion, and contact",
+          "paragraphs": [
+            "TouchGate integrates no advertising SDKs, behavioral analytics trackers, or cross-app tracking frameworks, and never sells personal data. Apple may provide aggregated crash and performance diagnostics based on your device settings. This privacy page is hosted on GitHub Pages with no ads, scripts, or cookies set by us; standard connection logs are governed by GitHub’s privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement.",
+            "You can clear all local history and specimen photos inside the app at any time, and uninstalling the app permanently removes all local data. For privacy questions or support, contact Wang xiaohu via https://ai-topic.cn and mention TouchGate."
+          ]
+        }
+      ]
+    },
+    "zh-Hant": {
+      "label": "繁體中文",
+      "appName": "碰草門禁 · TouchGate",
+      "title": "隱私權政策",
+      "dateLabel": "生效與更新日期",
+      "developerLabel": "開發者",
+      "supportLabel": "技術支援與隱私聯繫",
+      "intro": "本政策適用於 Wang xiaohu 提供的 iOS 應用「碰草門禁（TouchGate）」（含桌面小工具、動態島以及 Apple 螢幕使用時間監控與攔截擴充功能）。本政策說明應用如何在裝置本機使用螢幕使用時間權限、端側相機視覺偵測、運動步數感測、近場標籤讀取與本機通知，以及你如何管理或刪除自己的資料。",
+      "summary": "無需註冊帳號，100% 端側本機執行。你的應用鎖定選擇、相機姿態與戶外草地辨識、步數統計、NFC 標籤綁定、打卡紀錄與可選實拍標本照片均嚴格在你的 iPhone 本機處理與儲存；開發者不營運任何使用者伺服器，不收集、不上傳、不出售你的任何個人資料，亦不含廣告或跨應用追蹤。",
+      "sections": [
+        {
+          "title": "1. 本機紀錄、規則設定與系統擴充共享",
+          "paragraphs": [
+            "你在應用內設定的門禁規則、打卡紀錄、成就解鎖狀態以及已綁定的實體錨點資訊，均僅儲存在你的裝置本機與系統共享應用群組（App Group）容器中，以維持主應用、小工具、動態島與螢幕使用時間擴充的狀態一致。",
+            "本應用無雲端帳號系統，所有資料均不經過開發者伺服器。"
+          ]
+        },
+        {
+          "title": "2. Apple 螢幕使用時間（FamilyControls）權限",
+          "paragraphs": [
+            "僅在你主動授權 Apple「螢幕使用時間」權限並自行選取應用或分類後，碰草門禁才會對所選應用施加本機攔截，並在完成實體挑戰後提供臨時放行與到期自動重鎖。",
+            "依 Apple 系統隱私機制，所選應用僅以系統加密不透明權杖（Opaque Token）存於本機，開發者無法讀取你的已安裝應用清單或使用明細，亦不會向外傳輸。你可隨時於系統「設定 → 螢幕使用時間」撤回授權。"
+          ]
+        },
+        {
+          "title": "3. 端側相機、戶外實拍標本與防作弊校驗",
+          "paragraphs": [
+            "當你進行「運動計數」、「出門摸草」或「條碼掃描」挑戰時，相機畫面僅於裝置記憶體內透過 Apple Vision 即時本機分析，絕不錄影、絕不上傳任何伺服器。",
+            "「出門摸草」通關時，應用可於本機沙盒保存一張壓縮實景照片供「摸草標本牆」與你主動分享的「摸草證明卡」使用，你隨時可在「規則 → 清空本機紀錄」中一鍵刪除。"
+          ]
+        },
+        {
+          "title": "4. 運動與健身（步數與微動）及近場標籤（NFC）",
+          "paragraphs": [
+            "進行「起身走步」或「出門摸草」防翻拍校驗時，應用僅在挑戰進行期間透過 Apple CoreMotion 讀取本機即時步數與手持微動訊號，挑戰結束立即停止，不讀取歷史健康檔案，亦不上傳資料。",
+            "綁定或輕觸 NFC 貼紙時，應用僅透過 Apple CoreNFC 在本機比對標籤編號，不向外傳送資訊。"
+          ]
+        },
+        {
+          "title": "5. 本機通知、第三方 SDK 與資料管理",
+          "paragraphs": [
+            "所有提醒均由本機通知中心觸發，無遠端推播伺服器；分享海報由本機即時繪製並僅在你點擊分享時交由 iOS 系統分享面板處理。",
+            "本應用不整合任何廣告 SDK、分析埋點或跨應用追蹤框架。本隱私網頁託管於 GitHub Pages，適用 GitHub 隱私權聲明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。你隨時可在應用內清空資料或解除安裝移除全部本機資料，如有疑問請透過 https://ai-topic.cn 聯繫 Wang xiaohu 並註明「碰草門禁（TouchGate）」。"
+          ]
+        }
+      ]
+    },
+    "ja": {
+      "label": "日本語",
+      "appName": "タッチゲート · TouchGate",
+      "title": "プライバシーポリシー",
+      "dateLabel": "発効・更新日",
+      "developerLabel": "開発者",
+      "supportLabel": "サポート・お問い合わせ",
+      "intro": "本ポリシーは Wang xiaohu が提供する iOS アプリ「タッチゲート（TouchGate）」（ウィジェット、ライブアクティビティ、Apple スクリーンタイム拡張機能を含む）に適用されます。スクリーンタイム権限、端末内カメラ解析、歩数・モーションセンサー、NFC タグ読み取り、およびローカル通知の取り扱いとデータ管理方法を説明します。",
+      "summary": "アカウント登録不要、100% 端末内完結で動作します。ロック対象アプリの選択、カメラによる運動・自然判定、歩数計測、NFC／バーコード登録、達成履歴および任意保存の自然スナップ写真はすべてお使いの iPhone 内のみで処理・保存されます。開発者はユーザーサーバーを運営せず、個人データの収集・送信・販売、広告表示、アプリ横断トラッキングを一切行いません。",
+      "sections": [
+        {
+          "title": "1. 端末内データと拡張機能間の共有",
+          "paragraphs": [
+            "ゲート設定、チャレンジ履歴、実績解除状態、登録済み物理アンカー情報は端末内ストレージおよび Apple App Group コンテナ内のみに保存され、本体アプリ・ウィジェット・ライブアクティビティ・スクリーンタイム拡張間で同期されます。外部サーバーへの送信は一切ありません。"
+          ]
+        },
+        {
+          "title": "2. Apple スクリーンタイム（FamilyControls）権限",
+          "paragraphs": [
+            "ユーザーが明示的に許可しロック対象アプリを選択した場合にのみ、端末内でシールド制限・一時解除・自動再ロックを行います。選択されたアプリは Apple のプライバシー保護トークンとして端末内のみで扱われ、開発者がインストール済みアプリ一覧や利用詳細を取得・送信することはできません。システム設定からいつでも権限を取り消せます。"
+          ]
+        },
+        {
+          "title": "3. 端末内カメラ解析と自然スナップ写真",
+          "paragraphs": [
+            "運動カウント、屋外の芝生・青空チェック、バーコード読み取り時のカメラ映像は Apple Vision により端末メモリ内のみでリアルタイム解析され、録画やサーバー送信は行いません。屋外チャレンジ達成時に任意で端末内サンドボックスに保存されるスナップ写真は、「ルール → 履歴をクリア」からいつでも一括削除できます。"
+          ]
+        },
+        {
+          "title": "4. モーションとフィットネスおよび NFC タグ",
+          "paragraphs": [
+            "立ち歩きチャレンジや画面撮影防止チェックでは、チャレンジ中のみ Apple CoreMotion を用いてリアルタイム歩数と自然な手ブレを端末内で計測し、終了と同時に停止します。NFC タグ読み取りは Apple CoreNFC により端末内での照合のみに使用します。"
+          ]
+        },
+        {
+          "title": "5. 第三者 SDK・データ削除・お問い合わせ",
+          "paragraphs": [
+            "本アプリは広告 SDK、行動解析ツール、クロスアプリトラッキングを一切含みません。本ポリシーページは GitHub Pages 上でホストされており、GitHub のプライバシーステートメント（https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement）が適用されます。",
+            "アプリ内の履歴削除またはアプリアンインストールにより端末内データをすべて削除できます。お問い合わせはサポート URL（https://ai-topic.cn）より開発者 Wang xiaohu まで「TouchGate」と明記の上ご連絡ください。"
+          ]
+        }
+      ]
+    }
+  }
+}
