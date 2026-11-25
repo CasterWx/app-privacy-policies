@@ -18,6 +18,12 @@
       "name": "体迹 · BodyTrace",
       "source": "content/mobile/apps/legal/privacy/c8a3e71b49d2f605/policy.json",
       "publicPath": "documents/mobile/apps/legal/privacy/c8a3e71b49d2f605"
+    },
+    {
+      "slug": "lifeweeks",
+      "name": "每周一格 · LifeWeeks",
+      "source": "content/mobile/apps/legal/privacy/d4f7b2a96e1c8043/policy.json",
+      "publicPath": "documents/mobile/apps/legal/privacy/d4f7b2a96e1c8043"
     }
   ]
 }
