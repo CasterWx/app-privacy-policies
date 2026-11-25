@@ -36,6 +36,12 @@
       "name": "偷得半页闲 · ScrollInk",
       "source": "content/mobile/apps/legal/privacy/b7e9d4c21a8f5036/policy.json",
       "publicPath": "documents/mobile/apps/legal/privacy/b7e9d4c21a8f5036"
+    },
+    {
+      "slug": "cleanroll",
+      "name": "清一清相册 · CleanRoll",
+      "source": "content/mobile/apps/legal/privacy/e6a9c3d82b7f4109/policy.json",
+      "publicPath": "documents/mobile/apps/legal/privacy/e6a9c3d82b7f4109"
     }
   ]
 }
