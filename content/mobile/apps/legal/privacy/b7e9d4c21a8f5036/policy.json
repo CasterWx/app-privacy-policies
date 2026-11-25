@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "slug": "scrollink",
+  "effectiveDate": "2026-11-26",
+  "developer": "Wang xiaohu",
+  "supportUrl": "https://ai-topic.cn",
+  "defaultLanguage": "zh-Hans",
+  "languages": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "appName": "偷得半页闲",
+      "title": "隐私政策",
+      "dateLabel": "生效与更新日期",
+      "developerLabel": "开发者",
+      "supportLabel": "技术支持与隐私联系",
+      "intro": "本政策适用于 Wang xiaohu 提供的 iOS / iPadOS 本地电子书阅读应用「偷得半页闲」（含系统分享扩展「存入半页闲」及主屏幕桌面小组件）。本政策说明应用如何在设备本地解析与存储你的电子书、自定义字体、阅读进度与朱批笔记，局域网 Wi-Fi 传书与个人 iCloud 键值同步如何工作，应用内购买如何处理，以及你如何管理或删除全部数据。",
+      "summary": "无需注册账号，不含任何书源或书城。所有电子书（EPUB、TXT、Markdown、PDF）与字体均保存在你的设备本地并离线解析排版；开发者不运营书籍或用户服务器，不上传、不收集、不出售你的藏书与阅读记录，亦不含广告或跨应用追踪。",
+      "sections": [
+        {
+          "title": "1. 本地书籍、自定义字体导入与分享扩展",
+          "paragraphs": [
+            "当你通过系统「文件」选择器、隔空投送（AirDrop）或系统分享扩展「存入半页闲」主动导入本地电子书（EPUB、TXT、Markdown、PDF）或自定义字体文件（TTF、OTF、TTC）时，应用仅在你的设备本地沙盒及共享应用组（App Group）目录中复制、解析并渲染这些文件。",
+            "全部解析、中文排版、听书语音合成（基于系统 AVSpeechSynthesizer）及离线网页视图渲染均在设备本地运行，电子书原文、阅读记录与笔记不会上传至开发者服务器。"
+          ]
+        },
+        {
+          "title": "2. 局域网 Wi-Fi 传书权限",
+          "paragraphs": [
+            "仅当你主动打开「局域网 Wi-Fi 传书」页面时，应用才会请求 iOS 本地网络权限，并在你当前连接的同一局域网内启动临时本地 HTTP 传书服务，方便你通过电脑浏览器将本地电子书或字体文件直接传送至手机。",
+            "传输流量仅在你自己的局域网设备之间直接流转，不经过任何外部云端或开发者服务器；关闭传书页面后本地服务立即停止。"
+          ]
+        },
+        {
+          "title": "3. 相册写入与自定义封面选取",
+          "paragraphs": [
+            "仅当你在「画卷书摘工坊」中主动点击「存入相册」时，应用才会请求系统照片图库写入权限，用于将你生成的书摘长图保存至本地相册。",
+            "当你使用系统照片选择器为书籍更换自定义封面时，应用仅读取你主动选定的单张图片并保存在本地书房封面目录中，不访问你的整个相册库。"
+          ]
+        },
+        {
+          "title": "4. 桌面小组件、个人 iCloud 同步与 JSON 备份",
+          "paragraphs": [
+            "应用在设备本地及共享应用组（App Group）中保存阅读偏好、书签、朱批划线、阅读时长统计以及桌面小组件（「案头在读」「每日素笺」）所需的最小展示快照。",
+            "应用支持使用 Apple 系统提供的个人 iCloud 键值存储（NSUbiquitousKeyValueStore）在你自己的 iPhone 与 iPad 之间同步阅读进度（按文件哈希匹配）与私人藏书印文。这些数据仅保存在你个人的 Apple 账户 iCloud 空间内，不经过开发者服务器，开发者无法访问。你也可以在「书房雅设」中随时将书签、朱批与进度导出为便携 JSON 备份文件自行保管或恢复。"
+          ]
+        },
+        {
+          "title": "5. 购买与恢复",
+          "paragraphs": [
+            "应用提供可选的一次性非消耗型应用内购买「偷得半页闲 · 雅藏版 Pro（永久买断）」，绝无自动续费订阅与广告。",
+            "所有付款、权益验证、恢复购买与退款状态核验均由 Apple App Store / StoreKit 2 处理。开发者不会获取你的银行卡信息或 Apple 账户密码。Apple 的商业服务与匿名财务统计适用 Apple 隐私政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "6. 主动分享、保留、删除与联系",
+          "paragraphs": [
+            "当你主动将画卷书摘长图、Markdown 读书笔记或 JSON 备份文件分享给第三方应用或他人时，后续处理适用接收方的隐私规则。本应用不集成广告 SDK、行为分析埋点或跨应用追踪框架，不出售个人信息。本隐私网页托管于 GitHub Pages，不含广告、脚本或我们设置的 Cookie；GitHub 的基础访问日志适用 GitHub 隐私声明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。",
+            "你的藏书、字体、朱批笔记与设置全部保留在你的设备存储与个人 iCloud 空间内；在应用内移出书籍或从系统卸载应用即可清除设备上的本地数据。开发者没有服务器端副本，无法代你访问或找回本地数据。如有隐私疑问或请求，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「偷得半页闲」。"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "English",
+      "appName": "ScrollInk (偷得半页闲)",
+      "title": "Privacy Policy",
+      "dateLabel": "Effective and updated",
+      "developerLabel": "Developer",
+      "supportLabel": "Support and privacy contact",
+      "intro": "This policy applies to ScrollInk (偷得半页闲), an iOS and iPadOS local e-book reader app provided by Wang xiaohu, including its Share Extension and Home Screen Widgets. It explains how the app handles your imported books, custom fonts, reading progress, annotations, optional local Wi-Fi transfer, personal iCloud key-value sync, and in-app purchases.",
+      "summary": "No account is required and no online book store or scraper is included. All imported e-books (EPUB, TXT, Markdown, PDF) and custom fonts are stored and parsed 100% locally on your device. The developer operates no book or user servers, never uploads or sells your library or reading history, and includes zero ads or cross-app tracking.",
+      "sections": [
+        {
+          "title": "1. Local books, custom fonts and Share Extension",
+          "paragraphs": [
+            "When you import local e-books (EPUB, TXT, Markdown, PDF) or custom font files (TTF, OTF, TTC) via the Files picker, AirDrop, or the system Share Extension, ScrollInk copies, parses, and typesets those files strictly inside your device sandbox and shared App Group container.",
+            "All parsing, Chinese/English typesetting, speech synthesis (using Apple’s on-device AVSpeechSynthesizer), and offline EPUB fallback rendering execute locally. Your books and notes are never uploaded to any developer server."
+          ]
+        },
+        {
+          "title": "2. Local Network Wi-Fi transfer",
+          "paragraphs": [
+            "Only when you explicitly open the Wi-Fi Transfer screen does the app request iOS Local Network permission to start a temporary local HTTP server on your current Wi-Fi network so you can transfer books or fonts directly from a computer browser on the same LAN.",
+            "Transfer traffic stays strictly inside your local network and never traverses external developer servers. The local server stops immediately when you close the Wi-Fi Transfer screen."
+          ]
+        },
+        {
+          "title": "3. Photo Library save and custom cover picker",
+          "paragraphs": [
+            "ScrollInk requests Photo Library write-only permission solely when you tap Save in the Quote Card Studio to save an exported quote poster image to your Photos library.",
+            "When you choose a custom book cover through the system PhotosPicker, the app reads only the single image you explicitly selected and stores it locally."
+          ]
+        },
+        {
+          "title": "4. Widgets, personal iCloud sync and JSON backups",
+          "paragraphs": [
+            "ScrollInk stores reading preferences, bookmarks, highlights, reading time statistics, and a minimal Home Screen Widget snapshot locally and inside its shared App Group container.",
+            "The app uses Apple’s personal iCloud key-value storage (NSUbiquitousKeyValueStore) to sync reading progress (keyed by file hash) and your personal seal text across your own iPhone and iPad. This data lives exclusively in your personal Apple iCloud account and cannot be accessed by the developer. You may also export or restore a portable JSON backup of your reading progress and highlights manually at any time."
+          ]
+        },
+        {
+          "title": "5. In-app purchases and restoration",
+          "paragraphs": [
+            "ScrollInk offers an optional one-time non-consumable lifetime purchase (Pro) with no recurring subscriptions and no advertisements.",
+            "All payment processing, entitlement checks, and purchase restorations are handled by Apple App Store / StoreKit 2. The developer never receives payment card details or your Apple Account password. Apple’s privacy policy governs App Store commerce: https://www.apple.com/legal/privacy/."
+          ]
+        },
+        {
+          "title": "6. Sharing, retention, deletion and contact",
+          "paragraphs": [
+            "When you share exported quote cards, Markdown notes, or JSON backups via the iOS share sheet, the destination app’s privacy policy applies. ScrollInk integrates no advertising SDKs, analytics trackers, or cross-app tracking frameworks, and never sells personal data. This privacy page is hosted on GitHub Pages with no ads, scripts, or cookies set by us; standard hosting logs are governed by GitHub’s privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement.",
+            "Your library, fonts, highlights, and settings stay on your device and in your personal iCloud account until you delete them in the app or uninstall the app. The developer maintains no server-side copies and cannot recover local data. For privacy questions or requests, contact Wang xiaohu via https://ai-topic.cn and reference ScrollInk (偷得半页闲)."
+          ]
+        }
+      ]
+    },
+    "zh-Hant": {
+      "label": "繁體中文",
+      "appName": "偷得半頁閒",
+      "title": "隱私權政策",
+      "dateLabel": "生效與更新日期",
+      "developerLabel": "開發者",
+      "supportLabel": "技術支援與隱私聯絡",
+      "intro": "本政策適用於 Wang xiaohu 提供的 iOS / iPadOS 本機電子書閱讀應用程式「偷得半頁閒」（含系統分享延伸功能與主畫面小工具）。本政策說明應用程式如何在裝置本機處理你匯入的電子書、自訂字體、閱讀進度與批註筆記，以及區域網路傳書、個人 iCloud 同步與購買之運作方式。",
+      "summary": "無須註冊帳號，不含任何書城或書源。所有電子書（EPUB、TXT、Markdown、PDF）與字體皆於你的裝置本機離線解析與排版；開發者不營運書籍伺服器，不上傳、不蒐集、不販售你的藏書與閱讀紀錄，亦不含廣告或跨 App 追蹤。",
+      "sections": [
+        {
+          "title": "1. 本機書籍、自訂字體匯入與分享延伸功能",
+          "paragraphs": [
+            "當你透過系統檔案選擇器、AirDrop 或系統分享延伸功能匯入電子書（EPUB、TXT、Markdown、PDF）或字體檔（TTF、OTF、TTC）時，應用程式僅在你的裝置本機沙盒及 App Group 共享容器內解析與渲染。",
+            "全部排版、語音朗讀與離線檢視皆於本機完成，絕不會將電子書原文或筆記上傳至開發者伺服器。"
+          ]
+        },
+        {
+          "title": "2. 區域網路 Wi-Fi 傳書權限",
+          "paragraphs": [
+            "僅當你主動開啟「Wi-Fi 傳書」畫面時，應用程式才會要求本機網路權限並於同一區域網路啟動暫時性本機 HTTP 傳書服務，方便從電腦瀏覽器直接傳送書籍或字體；關閉畫面即立即停止服務，資料不經過外部雲端。"
+          ]
+        },
+        {
+          "title": "3. 相簿寫入與自訂封面選取",
+          "paragraphs": [
+            "僅當你於「畫卷書摘工坊」點擊儲存長圖時，應用程式才會要求相簿寫入權限；透過系統照片選擇器更換自訂書籍封面時，僅讀取你選取的單張圖片並儲存在本機。"
+          ]
+        },
+        {
+          "title": "4. 桌面小工具、個人 iCloud 同步與 JSON 備份",
+          "paragraphs": [
+            "應用程式於本機及 App Group 儲存閱讀偏好、書籤、朱批劃線、閱讀統計與主畫面小工具摘要。",
+            "應用程式支援使用 Apple 個人 iCloud 鍵值儲存（NSUbiquitousKeyValueStore）在你的 iPhone 與 iPad 之間同步閱讀進度與私人藏書印文，資料僅存於你個人的 iCloud 帳號，開發者無法存取。你亦可隨時匯出或還原 JSON 備份檔。"
+          ]
+        },
+        {
+          "title": "5. 購買與回復",
+          "paragraphs": [
+            "應用程式提供選用的一次性買斷 App 內購買（雅藏版 Pro），無訂閱且無廣告。所有付款、驗證與回復購買皆由 Apple App Store / StoreKit 2 處理，適用 Apple 隱私權政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "6. 分享、刪除與聯絡",
+          "paragraphs": [
+            "本應用程式不含廣告 SDK、行為分析或跨 App 追蹤，不販售個人資料。本網頁託管於 GitHub Pages，適用 GitHub 隱私聲明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。",
+            "刪除書籍或移除應用程式即可清除本機資料。如有任何隱私疑問，請透過 https://ai-topic.cn 聯絡開發者 Wang xiaohu，並註明涉及「偷得半頁閒」。"
+          ]
+        }
+      ]
+    }
+  }
+}

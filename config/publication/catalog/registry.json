@@ -30,6 +30,12 @@
       "name": "余因 · AfterCaff",
       "source": "content/mobile/apps/legal/privacy/d9e4b7a21f6c8304/policy.json",
       "publicPath": "documents/mobile/apps/legal/privacy/d9e4b7a21f6c8304"
+    },
+    {
+      "slug": "scrollink",
+      "name": "偷得半页闲 · ScrollInk",
+      "source": "content/mobile/apps/legal/privacy/b7e9d4c21a8f5036/policy.json",
+      "publicPath": "documents/mobile/apps/legal/privacy/b7e9d4c21a8f5036"
     }
   ]
 }
