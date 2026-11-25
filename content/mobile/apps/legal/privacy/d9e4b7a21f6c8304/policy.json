@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "slug": "aftercaff",
+  "effectiveDate": "2026-11-26",
+  "developer": "Wang xiaohu",
+  "supportUrl": "https://ai-topic.cn",
+  "defaultLanguage": "zh-Hans",
+  "languages": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "appName": "余因 AfterCaff",
+      "title": "隐私政策",
+      "dateLabel": "生效与更新日期",
+      "developerLabel": "开发者",
+      "supportLabel": "技术支持与隐私联系",
+      "intro": "本政策适用于 Wang xiaohu 提供的 iOS / iPadOS / watchOS 应用「余因 AfterCaff」（含桌面小组件、灵动岛、控制中心按钮、Siri 快捷指令与 Apple Watch 伴侣端）。本政策说明应用如何在设备本地保存你的饮品记录与代谢参数、可选的 Apple HealthKit 双向同步、离线 Vision OCR 小票识别、iCloud 多端同步与应用内购买如何工作，以及你如何管理或删除自己的数据。",
+      "summary": "无需注册账号。你的咖啡因饮品记录、代谢参数、自定义配方、晨间睡眠打卡与小票 OCR 识别均在设备本地处理与存储，并仅通过你个人的 Apple iCloud 键值空间进行跨设备同步；开发者不运营用户健康数据库，不上传、不收集、不出售你的个人健康数据，亦不含广告或跨应用追踪。",
+      "sections": [
+        {
+          "title": "1. 本地记录、代谢设置与跨组件共享",
+          "paragraphs": [
+            "你在应用内记录的饮品名称、咖啡因毫克数、饮用时间、杯型规格、慢饮时长、单杯花销、主观体感标签、晨间睡眠打卡、自定义饮品配方以及代谢模型参数（如咖啡因半衰期、入睡残留安全线、每日建议上限、目标就寝时间与温和降因计划），均保存在你的设备本地 SwiftData 数据库与系统共享应用组（App Group）容器中，以便主应用、桌面小组件、灵动岛、控制中心和 Siri 快捷指令保持一致状态。",
+            "当你配对使用 Apple Watch 时，应用会通过 Apple WatchConnectivity 在你的 iPhone 与 Apple Watch 之间直接同步近期咖啡因快照与手腕快捷记录，数据不经过开发者服务器。"
+          ]
+        },
+        {
+          "title": "2. Apple HealthKit 睡眠分期读取与膳食咖啡因写入",
+          "paragraphs": [
+            "仅当你主动点击并授予系统权限后，余因才会通过 Apple HealthKit 读取你近期的睡眠分析（Sleep Analysis，含深睡、REM 与核心睡眠分期）数据以在设备本地分析睡前咖啡因残留与睡眠质量关联，并在你记录饮品时将对应的咖啡因毫克数写入 Apple 健康的「膳食咖啡因（Dietary Caffeine）」。",
+            "余因严格遵守 Apple HealthKit 隐私与审核规范：从 HealthKit 读取的健康数据仅在你的设备本地参与计算与展示，绝不上传云端、绝不用于广告或营销、绝不用于数据经纪，也绝不共享给任何第三方。你可以随时在 iPhone「设置 → 健康 → 数据访问与设备」中撤回或分别调整读取/写入权限；拒绝授权时应用其余功能仍可正常使用。"
+          ]
+        },
+        {
+          "title": "3. 离线 Vision OCR 订单识别、相机与相册权限",
+          "paragraphs": [
+            "当你主动使用「拍小票 / 订单识别」功能拍摄咖啡杯贴、小票，或通过系统照片选择器选取订单截图、或主动点击「识别剪贴板订单截图」时，文字识别完全通过设备端离线 Apple Vision OCR 引擎完成，图像与识别文本均不会上传至任何外部服务器，也不保留原图。",
+            "当你主动将「每周风味账单海报」保存到相册时，应用仅申请相册写入权限将生成的图片写入你的系统照片图库，不读取或扫描你的其他相册内容。"
+          ]
+        },
+        {
+          "title": "4. 个人 iCloud 同步与本地提醒",
+          "paragraphs": [
+            "应用使用 Apple 提供的个人 iCloud 键值存储（NSUbiquitousKeyValueStore）在你登录同一 Apple 账户的设备之间同步近期饮品记录、代谢设置、自定义配方、置顶饮品与晨间打卡。数据仅存储在你个人的 Apple iCloud 空间内，开发者无法读取或访问。你可随时在系统 iCloud 设置中关闭同步。",
+            "当你开启「最后一杯截止提醒」时，提醒由设备本地通知中心（UNUserNotificationCenter）定时触发，不依赖远程推送服务器，亦不收集设备推送令牌。"
+          ]
+        },
+        {
+          "title": "5. 订阅、终身买断与恢复购买",
+          "paragraphs": [
+            "核心实时代谢曲线、116 款饮品库、双杯 PK、离线 OCR、7 天报表与 Apple 健康同步等基础功能免费提供。余因 Pro 提供年度自动续费订阅与一次性终身买断非消耗型内购，用于解锁 30 天深度报表、无限自定义配方、全部杂志周报海报主题及 4 套限定极简图标。",
+            "所有付款、订阅续期、恢复购买与退款/撤销状态均由 Apple App Store / StoreKit 2 处理。开发者不获取你的银行卡号或 Apple 账户密码。Apple 可能按其规则处理交易数据并向开发者提供匿名统计与财务报告，适用 Apple 隐私政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "6. 第三方 SDK、医学参考声明与数据管理",
+          "paragraphs": [
+            "本应用不集成任何广告 SDK、行为分析埋点或跨应用追踪框架，不出售个人信息。Apple 可能根据你的设备诊断设置向开发者提供匿名崩溃与性能报告。本隐私网页由 GitHub Pages 托管，不含广告、脚本或我们设置的 Cookie；访问网页时 GitHub 可能记录基础安全日志，适用 GitHub 隐私声明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。",
+            "余因提供的咖啡因代谢曲线与安全入睡时间预测基于公开药代动力学 Bateman 模型与品牌公示/实测参考值，仅供日常作息与健康生活方式参考，并非医疗器械，不构成医疗诊断或临床建议。孕期、哺乳期或对咖啡因敏感人群请遵循执业医师指导。",
+            "你随时可在应用内导出 CSV 历史数据、删除单条记录或自定义配方，卸载应用可移除设备本地数据。如有任何隐私疑问或请求，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「余因 AfterCaff」（请勿在咨询中发送敏感医疗记录或完整支付凭据）。"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "English",
+      "appName": "AfterCaff",
+      "title": "Privacy Policy",
+      "dateLabel": "Effective and updated",
+      "developerLabel": "Developer",
+      "supportLabel": "Support and privacy contact",
+      "intro": "This policy applies to AfterCaff (余因 AfterCaff), an iOS, iPadOS, and watchOS app provided by Wang xiaohu, including its Widgets, Live Activities, Control Center controls, Siri Shortcuts, and Apple Watch companion app. It explains how the app stores caffeine logs and metabolism settings locally, how optional two-way Apple HealthKit sync, on-device Vision OCR receipt scanning, personal iCloud sync, and in-app purchases work, and how you can manage or delete your data.",
+      "summary": "No account is required. Your caffeine intake logs, metabolism parameters, custom drink recipes, morning sleep check-ins, and receipt OCR scans are processed locally on your device and synced only via your private Apple iCloud key-value storage. The developer operates no user health servers, never collects or sells your health data, and includes zero ads or cross-app tracking.",
+      "sections": [
+        {
+          "title": "1. On-device logs, settings, and companion sync",
+          "paragraphs": [
+            "Drink logs (name, caffeine mg, time consumed, cup size, slow-sip duration, drink price, and subjective feeling tags), morning sleep check-ins, custom drink recipes, and metabolism preferences (half-life, sleep-safe threshold, daily limit, target bedtime, and gentle taper settings) are stored locally in SwiftData and your app’s shared App Group container so the main app, Widgets, Live Activities, Control Center, and Siri Shortcuts stay synchronized.",
+            "When paired with Apple Watch, AfterCaff transfers recent caffeine snapshots and wrist quick-logs directly between your iPhone and Apple Watch via Apple WatchConnectivity without passing through developer servers."
+          ]
+        },
+        {
+          "title": "2. Apple HealthKit sleep stages and dietary caffeine",
+          "paragraphs": [
+            "Only after you explicitly grant permission does AfterCaff read recent Apple HealthKit Sleep Analysis samples (Deep, REM, and Core sleep stages) to correlate bedtime caffeine with sleep quality locally on your device, and write logged caffeine amounts to Apple Health Dietary Caffeine.",
+            "AfterCaff strictly adheres to Apple HealthKit privacy guidelines: HealthKit data stays exclusively on your device, is never uploaded to external servers, is never used for advertising, marketing, or data brokering, and is never shared with third parties. You may revoke or adjust read/write permissions anytime in iOS Settings → Health → Data Access & Devices; declining permission does not block other app features."
+          ]
+        },
+        {
+          "title": "3. On-device Vision OCR, camera, and photos access",
+          "paragraphs": [
+            "When you scan a coffee receipt or cup label with the camera, pick an order screenshot via the system photo picker, or tap Scan Clipboard Screenshot, all text recognition runs 100% offline using Apple’s on-device Vision OCR engine. No images or recognized text are uploaded to external servers, and original images are not retained.",
+            "When you save a Weekly Flavor Poster to your Photos library, the app uses add-only photo library permission strictly to write the exported poster and never scans or reads your existing photos."
+          ]
+        },
+        {
+          "title": "4. Personal iCloud sync and local reminders",
+          "paragraphs": [
+            "AfterCaff uses Apple’s personal iCloud key-value storage (NSUbiquitousKeyValueStore) to sync recent drink logs, metabolism settings, custom recipes, pinned drinks, and sleep check-ins across your own devices signed into the same Apple Account. This data lives exclusively in your personal iCloud storage and cannot be accessed by the developer. You can disable iCloud sync anytime in system settings.",
+            "Optional daily Last Cup Cutoff reminders are scheduled strictly on-device via iOS UNUserNotificationCenter with no remote push server or device push token collection."
+          ]
+        },
+        {
+          "title": "5. Subscriptions, lifetime purchase, and restoration",
+          "paragraphs": [
+            "Core real-time metabolism curves, the 116+ calibrated beverage catalog, Dual-Cup PK simulation, offline OCR, 7-day reports, and Apple Health sync are free. AfterCaff Pro offers an auto-renewing Annual subscription and a one-time Lifetime non-consumable purchase to unlock 30-day analytics, unlimited custom recipes, all magazine poster themes, and 4 minimalist app icons.",
+            "All payments, renewals, restorations, and refund/revocation verifications are handled by Apple App Store / StoreKit 2. The developer never receives payment card details or Apple Account credentials. Apple’s privacy policy applies to its commerce services: https://www.apple.com/legal/privacy/."
+          ]
+        },
+        {
+          "title": "6. Third-party SDKs, wellness disclaimer, and data control",
+          "paragraphs": [
+            "AfterCaff integrates no advertising SDKs, behavioral analytics trackers, or cross-app tracking frameworks, and never sells personal data. Apple may provide aggregated crash and performance diagnostics based on your device settings. This policy page is hosted on GitHub Pages with no ads, scripts, or cookies set by us; standard connection logs are governed by GitHub’s privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement.",
+            "Metabolism curves and sleep-safe estimates are calculated using a public one-compartment Bateman model and reference caffeine values for wellness tracking only. AfterCaff is not a medical device and does not provide medical diagnosis or clinical advice. Consult a qualified physician if pregnant, nursing, or sensitive to caffeine.",
+            "You can export your history to CSV or delete individual entries and custom recipes inside the app at any time, and uninstalling removes all local device data. For privacy questions or requests, contact Wang xiaohu via https://ai-topic.cn and reference AfterCaff (please do not send sensitive medical records or payment credentials)."
+          ]
+        }
+      ]
+    },
+    "zh-Hant": {
+      "label": "繁體中文",
+      "appName": "余因 AfterCaff",
+      "title": "隱私權政策",
+      "dateLabel": "生效與更新日期",
+      "developerLabel": "開發者",
+      "supportLabel": "技術支援與隱私聯絡",
+      "intro": "本政策適用於 Wang xiaohu 提供的 iOS / iPadOS / watchOS 應用程式「余因 AfterCaff」（含桌面小工具、靈動島、控制中心、Apple 捷徑與 Apple Watch 伴侶端）。本政策說明應用程式如何在裝置本機儲存咖啡因紀錄與代謝設定、選用的 Apple HealthKit 雙向同步、離線 Vision OCR 辨識、個人 iCloud 同步及 App 內購買運作方式。",
+      "summary": "無須註冊帳號。你的咖啡因紀錄、代謝參數、自訂配方、晨間睡眠打卡與小票 OCR 辨識皆於裝置本機處理與儲存，僅透過你個人的 Apple iCloud 鍵值空間跨裝置同步；開發者不營運健康伺服器、不上傳或販售你的資料，亦不含廣告或跨 App 追蹤。",
+      "sections": [
+        {
+          "title": "1. 本機紀錄、代謝參數與跨端共享",
+          "paragraphs": [
+            "你在應用程式內建立的飲品紀錄、咖啡因毫克數、飲用時間、杯型、慢飲時長、價格、體感標籤、晨間打卡、自訂配方及代謝參數，均儲存於裝置本機 SwiftData 資料庫與 App Group 共享容器中，供主應用程式、小工具、靈動島、控制中心與捷徑即時同步。",
+            "配對 Apple Watch 時，應用程式透過 Apple WatchConnectivity 直接於 iPhone 與 Apple Watch 間同步快照與手腕快記，不經開發者伺服器。"
+          ]
+        },
+        {
+          "title": "2. Apple HealthKit 睡眠分期讀取與膳食咖啡因寫入",
+          "paragraphs": [
+            "僅在你主動授權後，余因才會透過 Apple HealthKit 讀取近期睡眠分析（深睡、REM 與核心睡眠）以於本機分析睡前咖啡因與睡眠關聯，並在記杯時將咖啡因攝取量寫入 Apple 健康的「膳食咖啡因」。",
+            "余因嚴格遵守 Apple HealthKit 隱私規範：健康資料絕不上傳雲端、絕不用於廣告行銷或資料經紀，也絕不分享給任何第三方。你可隨時於 iOS「設定 → 健康 → 資料取用權限與裝置」撤回或調整權限。"
+          ]
+        },
+        {
+          "title": "3. 離線 Vision OCR、相機與相簿權限",
+          "paragraphs": [
+            "拍攝小票／杯貼、選取訂單截圖或讀取剪貼簿截圖時，文字辨識皆由裝置端離線 Apple Vision OCR 完成，圖片與文字均不上傳任何外部伺服器，亦不保存原圖。",
+            "將每週風味海報儲存至相簿時，應用程式僅使用相簿寫入權限輸出成片，不讀取或掃描你的其他相片。"
+          ]
+        },
+        {
+          "title": "4. 個人 iCloud 同步與本機提醒",
+          "paragraphs": [
+            "應用程式透過 Apple 個人 iCloud 鍵值儲存（NSUbiquitousKeyValueStore）在你同一 Apple 帳號的裝置間同步近期紀錄、代謝設定與自訂配方，資料僅存於你的個人 iCloud 空間，開發者無法存取。",
+            "開啟「最後一杯截止提醒」時，提醒完全由 iOS 本機通知中心（UNUserNotificationCenter）排程，不依賴遠端推播伺服器。"
+          ]
+        },
+        {
+          "title": "5. 訂閱、終身買斷與回復購買",
+          "paragraphs": [
+            "核心即時曲線、116 款飲品圖鑑、雙杯 PK、離線 OCR、7 天報表與 Apple 健康同步免費使用。余因 Pro 提供年度自動續訂方案與一次性終身買斷，解鎖 30 天深度報表、無限自訂配方、全套雜誌海報主題及 4 款限定圖示。",
+            "所有付款、續期、回復與退款撤銷狀態均由 Apple App Store / StoreKit 2 處理，適用 Apple 隱私權政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "6. 第三方 SDK、非醫療聲明與資料管理",
+          "paragraphs": [
+            "本應用程式不含廣告 SDK、行為分析追蹤器或跨 App 追蹤框架，不販售個人資料。本隱私網頁託管於 GitHub Pages，不含廣告、指令碼或我們設定的 Cookie；連線紀錄適用 GitHub 隱私聲明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。",
+            "代謝曲線與安全入睡推算僅供日常健康參考，並非醫療器材，亦不構成醫療診斷或建議。你隨時可於 App 內匯出 CSV、刪除紀錄或解除安裝以清除本機資料。如有任何隱私疑問，請透過 https://ai-topic.cn 聯絡開發者 Wang xiaohu，並註明涉及「余因 AfterCaff」。"
+          ]
+        }
+      ]
+    },
+    "ja": {
+      "label": "日本語",
+      "appName": "AfterCaff（余因）",
+      "title": "プライバシーポリシー",
+      "dateLabel": "発効・更新日",
+      "developerLabel": "開発者",
+      "supportLabel": "サポートおよびプライバシー窓口",
+      "intro": "本ポリシーは、Wang xiaohu が提供する iOS / iPadOS / watchOS アプリ「AfterCaff（余因）」（ウィジェット、ライブアクティビティ、コントロールセンター、ショートカット、Apple Watch アプリを含む）に適用されます。端末内でのデータ保存、Apple ヘルスケア連携、オフライン Vision OCR、iCloud 同期、アプリ内課金の取り扱いについて説明します。",
+      "summary": "アカウント登録は不要です。カフェイン記録、代謝設定、カスタムレシピ、朝の睡眠チェック、レシート OCR はすべて端末内で処理・保存され、同期はご自身の Apple iCloud キー値ストレージのみを使用します。広告・追跡 SDK は一切含みません。",
+      "sections": [
+        {
+          "title": "1. 端末内保存および Apple Watch 連携",
+          "paragraphs": [
+            "記録したドリンク名、カフェイン量、摂取時刻、サイズ、ゆっくり飲み時間、価格、体感タグ、朝の睡眠チェック、カスタムレシピ、代謝パラメータは、端末内の SwiftData データベースおよび App Group コンテナに保存され、ウィジェットやショートカットと安全に共有されます。",
+            "Apple Watch との同期には Apple WatchConnectivity を使用し、iPhone と Apple Watch 間で直接データをやり取りします。開発者サーバーを経由することはありません。"
+          ]
+        },
+        {
+          "title": "2. Apple ヘルスケア（HealthKit）双方向連携",
+          "paragraphs": [
+            "ユーザーが明示的に許可した場合に限り、AfterCaff は Apple ヘルスケアの睡眠分析データ（深い睡眠・レム睡眠・コア睡眠）を読み取って就寝前カフェインとの相関を端末内で分析し、記録したカフェイン摂取量を「カフェイン」として書き込みます。",
+            "Apple HealthKit ガイドラインを厳格に遵守し、ヘルスケアデータを外部サーバーへ送信したり、広告・マーケティング・第三者提供に利用することは一切ありません。権限は iOS の「設定 → ヘルスケア」からいつでも変更・解除できます。"
+          ]
+        },
+        {
+          "title": "3. オフライン Vision OCR・カメラ・写真アクセス",
+          "paragraphs": [
+            "レシートや注文スクリーンショットの読み取りはすべて端末上の Apple Vision OCR エンジンでオフライン実行されます。画像や認識テキストが外部サーバーに送信されることはなく、元画像も保存しません。",
+            "週間ポスターを写真ライブラリに保存する際は書き込み権限のみを使用し、他の写真へアクセスすることはありません。"
+          ]
+        },
+        {
+          "title": "4. 個人 iCloud 同期とローカル通知",
+          "paragraphs": [
+            "同一 Apple Account の端末間同期には Apple の NSUbiquitousKeyValueStore を使用します。データはお客様自身の iCloud 領域にのみ保管され、開発者はアクセスできません。",
+            "最終コーヒー締切リマインダーは端末内の UNUserNotificationCenter によるローカル通知のみで動作します。"
+          ]
+        },
+        {
+          "title": "5. サブスクリプション・買い切り購入と復元",
+          "paragraphs": [
+            "基本的な代謝カーブ、116種以上のドリンク図鑑、2杯比較 PK、オフライン OCR、7日間レポート、ヘルスケア連携は無料で利用できます。AfterCaff Pro（年間自動更新サブスクリプションまたは買い切り）により、30日間レポート、無制限カスタムレシピ、全ポスターテーマ、4種の限定アイコンが解放されます。",
+            "決済・更新・復元・返金処理はすべて Apple App Store / StoreKit 2 が担当し、Apple プライバシーポリシー（https://www.apple.com/legal/privacy/）が適用されます。"
+          ]
+        },
+        {
+          "title": "6. 第三者 SDK・免責事項・お問い合わせ",
+          "paragraphs": [
+            "広告 SDK や行動追跡ツールは一切組み込んでいません。本ページは GitHub Pages で配信されており、アクセスログには GitHub プライバシーステートメント（https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement）が適用されます。",
+            "本アプリの代謝予測は一般的な薬物動態モデルに基づく健康参考値であり、医療機器や医療アドバイスではありません。CSV 書き出しや記録削除はアプリ内でいつでも行えます。プライバシーに関するお問い合わせは https://ai-topic.cn より「AfterCaff」と明記のうえ開発者 Wang xiaohu までご連絡ください。"
+          ]
+        }
+      ]
+    },
+    "ko": {
+      "label": "한국어",
+      "appName": "AfterCaff (여인)",
+      "title": "개인정보 처리방침",
+      "dateLabel": "시행 및 업데이트 날짜",
+      "developerLabel": "개발자",
+      "supportLabel": "지원 및 개인정보 문의",
+      "intro": "본 방침은 Wang xiaohu가 제공하는 iOS / iPadOS / watchOS 앱 'AfterCaff(여인)'(위젯, 실시간 현황, 제어 센터, 단축어, Apple Watch 앱 포함)에 적용됩니다. 기기 내 데이터 저장, Apple 건강(HealthKit) 양방향 연동, 오프라인 Vision OCR 영수증 인식, 개인 iCloud 동기화 및 인앱 결제 처리 방식을 안내합니다.",
+      "summary": "회원가입이 필요 없습니다. 모든 카페인 섭취 기록, 대사 설정, 커스텀 레시피, 아침 수면 체크 및 영수증 OCR은 기기 내부에서만 처리·저장되며 개인 Apple iCloud 키-값 저장소를 통해서만 동기화됩니다. 광고 및 추적 SDK가 전혀 없습니다.",
+      "sections": [
+        {
+          "title": "1. 기기 내 기록 저장 및 Apple Watch 동기화",
+          "paragraphs": [
+            "앱에 기록한 음료명, 카페인 함량, 섭취 시각, 사이즈, 천천히 마시기 시간, 가격, 체감 태그, 아침 수면 체크인, 커스텀 레시피 및 대사 설정은 기기 내 SwiftData와 App Group 공유 컨테이너에 저장되어 위젯·실시간 현황·단축어와 동기화됩니다.",
+            "Apple Watch와 페어링 시 Apple WatchConnectivity를 통해 iPhone과 Watch 간에 직접 동기화되며 개발자 서버를 거치지 않습니다."
+          ]
+        },
+        {
+          "title": "2. Apple 건강(HealthKit) 수면 단계 읽기 및 카페인 기록",
+          "paragraphs": [
+            "사용자가 명시적으로 권한을 허용한 경우에만 Apple 건강의 수면 분석(깊은 수면, REM, 코어 수면) 데이터를 읽어 기기 내에서 취침 전 카페인과의 상관관계를 분석하며, 기록한 카페인 섭취량을 '카페인' 항목으로 저장합니다.",
+            "Apple HealthKit 개인정보 규정을 엄격히 준수하며 건강 데이터는 외부 서버로 전송하거나 광고·마케팅·제3자 공유에 절대 사용하지 않습니다. 권한은 iOS 설정 → 건강에서 언제든 변경하거나 철회할 수 있습니다."
+          ]
+        },
+        {
+          "title": "3. 오프라인 Vision OCR, 카메라 및 사진 권한",
+          "paragraphs": [
+            "영수증·컵 라벨 촬영, 주문 스크린샷 선택 또는 클립보드 인식 시 모든 문자 인식은 기기 내 오프라인 Apple Vision OCR로 처리되며 이미지나 텍스트는 외부로 전송되거나 저장되지 않습니다.",
+            "주간 포스터를 사진 앱에 저장할 때는 쓰기 전용 권한만 사용하며 다른 사진을 읽거나 스캔하지 않습니다."
+          ]
+        },
+        {
+          "title": "4. 개인 iCloud 동기화 및 로컬 알림",
+          "paragraphs": [
+            "동일 Apple 계정의 기기 간 동기화는 Apple의 개인 iCloud 키-값 저장소(NSUbiquitousKeyValueStore)를 사용하며 개발자는 해당 데이터에 접근할 수 없습니다.",
+            "마지막 커피 마감 알림은 기기 내 로컬 알림(UNUserNotificationCenter)으로만 예약되며 원격 푸시 서버를 사용하지 않습니다."
+          ]
+        },
+        {
+          "title": "5. 구독, 영구 구매 및 복원",
+          "paragraphs": [
+            "실시간 대사 곡선, 116종 음료 도감, 두 잔 비교 PK, 오프라인 OCR, 7일 리포트 및 Apple 건강 연동은 무료로 제공됩니다. AfterCaff Pro(연간 자동 갱신 구독 또는 평생 소장 1회 결제)를 통해 30일 심층 리포트, 무제한 커스텀 레시피, 전체 주간 포스터 테마 및 4가지 미니멀 아이콘이 잠금 해제됩니다.",
+            "모든 결제, 갱신, 복원 및 환불 검증은 Apple App Store / StoreKit 2에서 처리되며 Apple 개인정보 처리방침(https://www.apple.com/legal/privacy/)이 적용됩니다."
+          ]
+        },
+        {
+          "title": "6. 제3자 SDK, 비의료 고지 및 문의",
+          "paragraphs": [
+            "광고 SDK, 행동 분석 트래커 또는 앱 간 추적 프레임워크를 포함하지 않습니다. 본 페이지는 GitHub Pages에서 호스팅되며 접속 로그는 GitHub 개인정보 보호정책(https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)의 적용을 받습니다.",
+            "대사 곡선 및 숙면 예측은 일반적인 약동학 모델 기반의 건강 참고 정보이며 의료 기기나 의학적 조언이 아닙니다. 앱 내에서 언제든 CSV 내보내기 및 기록 삭제가 가능합니다. 개인정보 문의는 https://ai-topic.cn 을 통해 'AfterCaff'를 명시하여 개발자 Wang xiaohu에게 연락해 주세요."
+          ]
+        }
+      ]
+    }
+  }
+}

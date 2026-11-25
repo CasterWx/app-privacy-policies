@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="无需注册账号。你的咖啡因饮品记录、代谢参数、自定义配方、晨间睡眠打卡与小票 OCR 识别均在设备本地处理与存储，并仅通过你个人的 Apple iCloud 键值空间进行跨设备同步；开发者不运营用户健康数据库，不上传、不收集、不出售你的个人健康数据，亦不含广告或跨应用追踪。">
+<title>余因 AfterCaff — 隐私政策</title>
+<link rel="stylesheet" href="../../../../../../style.css">
+</head>
+<body>
+<header class="site-header"><span>余因 AfterCaff</span><span>Privacy / 隐私</span></header>
+<main id="main">
+<nav class="languages" aria-label="Language / 语言"><a href="zh-Hans.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">简体中文</a> <a href="en.html" lang="en" hreflang="en">English</a> <a href="zh-Hant.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a> <a href="ja.html" lang="ja" hreflang="ja">日本語</a> <a href="ko.html" lang="ko" hreflang="ko">한국어</a></nav>
+<div class="eyebrow">余因 AfterCaff</div>
+<h1>隐私政策</h1>
+<p class="meta">生效与更新日期: <time datetime="2026-11-26">2026-11-26</time><br>开发者: Wang xiaohu</p>
+<p class="lead">本政策适用于 Wang xiaohu 提供的 iOS / iPadOS / watchOS 应用「余因 AfterCaff」（含桌面小组件、灵动岛、控制中心按钮、Siri 快捷指令与 Apple Watch 伴侣端）。本政策说明应用如何在设备本地保存你的饮品记录与代谢参数、可选的 Apple HealthKit 双向同步、离线 Vision OCR 小票识别、iCloud 多端同步与应用内购买如何工作，以及你如何管理或删除自己的数据。</p>
+<aside class="summary">无需注册账号。你的咖啡因饮品记录、代谢参数、自定义配方、晨间睡眠打卡与小票 OCR 识别均在设备本地处理与存储，并仅通过你个人的 Apple iCloud 键值空间进行跨设备同步；开发者不运营用户健康数据库，不上传、不收集、不出售你的个人健康数据，亦不含广告或跨应用追踪。</aside>
+<section aria-labelledby="section-1"><h2 id="section-1">1. 本地记录、代谢设置与跨组件共享</h2><p>你在应用内记录的饮品名称、咖啡因毫克数、饮用时间、杯型规格、慢饮时长、单杯花销、主观体感标签、晨间睡眠打卡、自定义饮品配方以及代谢模型参数（如咖啡因半衰期、入睡残留安全线、每日建议上限、目标就寝时间与温和降因计划），均保存在你的设备本地 SwiftData 数据库与系统共享应用组（App Group）容器中，以便主应用、桌面小组件、灵动岛、控制中心和 Siri 快捷指令保持一致状态。</p><p>当你配对使用 Apple Watch 时，应用会通过 Apple WatchConnectivity 在你的 iPhone 与 Apple Watch 之间直接同步近期咖啡因快照与手腕快捷记录，数据不经过开发者服务器。</p></section><section aria-labelledby="section-2"><h2 id="section-2">2. Apple HealthKit 睡眠分期读取与膳食咖啡因写入</h2><p>仅当你主动点击并授予系统权限后，余因才会通过 Apple HealthKit 读取你近期的睡眠分析（Sleep Analysis，含深睡、REM 与核心睡眠分期）数据以在设备本地分析睡前咖啡因残留与睡眠质量关联，并在你记录饮品时将对应的咖啡因毫克数写入 Apple 健康的「膳食咖啡因（Dietary Caffeine）」。</p><p>余因严格遵守 Apple HealthKit 隐私与审核规范：从 HealthKit 读取的健康数据仅在你的设备本地参与计算与展示，绝不上传云端、绝不用于广告或营销、绝不用于数据经纪，也绝不共享给任何第三方。你可以随时在 iPhone「设置 → 健康 → 数据访问与设备」中撤回或分别调整读取/写入权限；拒绝授权时应用其余功能仍可正常使用。</p></section><section aria-labelledby="section-3"><h2 id="section-3">3. 离线 Vision OCR 订单识别、相机与相册权限</h2><p>当你主动使用「拍小票 / 订单识别」功能拍摄咖啡杯贴、小票，或通过系统照片选择器选取订单截图、或主动点击「识别剪贴板订单截图」时，文字识别完全通过设备端离线 Apple Vision OCR 引擎完成，图像与识别文本均不会上传至任何外部服务器，也不保留原图。</p><p>当你主动将「每周风味账单海报」保存到相册时，应用仅申请相册写入权限将生成的图片写入你的系统照片图库，不读取或扫描你的其他相册内容。</p></section><section aria-labelledby="section-4"><h2 id="section-4">4. 个人 iCloud 同步与本地提醒</h2><p>应用使用 Apple 提供的个人 iCloud 键值存储（NSUbiquitousKeyValueStore）在你登录同一 Apple 账户的设备之间同步近期饮品记录、代谢设置、自定义配方、置顶饮品与晨间打卡。数据仅存储在你个人的 Apple iCloud 空间内，开发者无法读取或访问。你可随时在系统 iCloud 设置中关闭同步。</p><p>当你开启「最后一杯截止提醒」时，提醒由设备本地通知中心（UNUserNotificationCenter）定时触发，不依赖远程推送服务器，亦不收集设备推送令牌。</p></section><section aria-labelledby="section-5"><h2 id="section-5">5. 订阅、终身买断与恢复购买</h2><p>核心实时代谢曲线、116 款饮品库、双杯 PK、离线 OCR、7 天报表与 Apple 健康同步等基础功能免费提供。余因 Pro 提供年度自动续费订阅与一次性终身买断非消耗型内购，用于解锁 30 天深度报表、无限自定义配方、全部杂志周报海报主题及 4 套限定极简图标。</p><p>所有付款、订阅续期、恢复购买与退款/撤销状态均由 Apple App Store / StoreKit 2 处理。开发者不获取你的银行卡号或 Apple 账户密码。Apple 可能按其规则处理交易数据并向开发者提供匿名统计与财务报告，适用 Apple 隐私政策：<a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>。</p></section><section aria-labelledby="section-6"><h2 id="section-6">6. 第三方 SDK、医学参考声明与数据管理</h2><p>本应用不集成任何广告 SDK、行为分析埋点或跨应用追踪框架，不出售个人信息。Apple 可能根据你的设备诊断设置向开发者提供匿名崩溃与性能报告。本隐私网页由 GitHub Pages 托管，不含广告、脚本或我们设置的 Cookie；访问网页时 GitHub 可能记录基础安全日志，适用 GitHub 隐私声明：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>。</p><p>余因提供的咖啡因代谢曲线与安全入睡时间预测基于公开药代动力学 Bateman 模型与品牌公示/实测参考值，仅供日常作息与健康生活方式参考，并非医疗器械，不构成医疗诊断或临床建议。孕期、哺乳期或对咖啡因敏感人群请遵循执业医师指导。</p><p>你随时可在应用内导出 CSV 历史数据、删除单条记录或自定义配方，卸载应用可移除设备本地数据。如有任何隐私疑问或请求，请通过技术支持网址 <a href="https://ai-topic.cn">https://ai-topic.cn</a> 联系开发者 Wang xiaohu，并注明涉及「余因 AfterCaff」（请勿在咨询中发送敏感医疗记录或完整支付凭据）。</p></section>
+<footer><a href="https://ai-topic.cn">技术支持与隐私联系</a><p>余因 AfterCaff · Wang xiaohu</p></footer>
+</main></body>
+</html>
