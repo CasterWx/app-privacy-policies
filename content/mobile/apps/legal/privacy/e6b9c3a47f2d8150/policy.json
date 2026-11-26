@@ -52,7 +52,14 @@
           ]
         },
         {
-          "title": "6. 第三方 SDK、数据删除与联系我们",
+          "title": "6. 应用内购买（碰草门禁 Pro 终身买断）与恢复购买",
+          "paragraphs": [
+            "核心物理门禁、深蹲/起身走步/出门摸草基础解锁、7 天报表与桌面小组件免费提供。应用提供一次性非消耗型内购「碰草门禁 Pro（终身买断）」，用于解锁同日魔鬼加码、防反悔规则锁、防卸载保护、睡前与工作定时自动守门、全部运动姿势扩展以及史诗/传说收藏卡高清分享。",
+            "所有付款、购买校验、恢复已购项目与退款/撤销状态同步均由 Apple App Store / StoreKit 2 处理。开发者不获取你的银行卡号或 Apple 账户密码。Apple 可能按其规则处理交易数据并向开发者提供匿名销售统计及服务器端交易通知，适用 Apple 隐私政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "7. 第三方 SDK、数据删除与联系我们",
           "paragraphs": [
             "本应用不集成任何广告 SDK、第三方统计埋点或跨应用追踪框架，不出售或共享个人信息。Apple 可能依据你的设备诊断设置向开发者提供匿名崩溃与性能报告。本隐私网页托管于 GitHub Pages，不含广告、脚本或我们设置的 Cookie；访问网页时 GitHub 可能记录基础访问安全日志，适用 GitHub 隐私声明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。",
             "你随时可在应用「规则」页一键清空全部本地历史记录与标本照片，卸载应用可彻底移除设备本地数据。如有任何隐私疑问或支持需求，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「碰草门禁（TouchGate）」。"
@@ -106,7 +113,14 @@
           ]
         },
         {
-          "title": "6. Third-party SDKs, data deletion, and contact",
+          "title": "6. In-App Purchase (TouchGate Pro Lifetime) and restoration",
+          "paragraphs": [
+            "Core physical app shielding, Squats, Stand & Walk, Outdoor Touch Grass, 7-day reports, and Widgets are free. TouchGate offers an optional one-time non-consumable purchase (TouchGate Pro Lifetime) that unlocks daily escalating friction, Rule Tamper Lock, App Removal Protection, Bedtime and Work Focus auto-schedules, additional exercise modes, and high-res Epic/Legendary card exports.",
+            "All payments, receipt verifications, restorations, and refund/revocation updates are handled exclusively by Apple App Store / StoreKit 2. The developer never receives payment card details or Apple Account credentials. Apple may process commerce transactions and provide the developer with transaction notifications and aggregated sales reports under Apple’s privacy policy: https://www.apple.com/legal/privacy/."
+          ]
+        },
+        {
+          "title": "7. Third-party SDKs, data deletion, and contact",
           "paragraphs": [
             "TouchGate integrates no advertising SDKs, behavioral analytics trackers, or cross-app tracking frameworks, and never sells personal data. Apple may provide aggregated crash and performance diagnostics based on your device settings. This privacy page is hosted on GitHub Pages with no ads, scripts, or cookies set by us; standard connection logs are governed by GitHub’s privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement.",
             "You can clear all local history and specimen photos inside the app at any time, and uninstalling the app permanently removes all local data. For privacy questions or support, contact Wang xiaohu via https://ai-topic.cn and mention TouchGate."
@@ -153,7 +167,14 @@
           ]
         },
         {
-          "title": "5. 本機通知、第三方 SDK 與資料管理",
+          "title": "5. 應用內購買（碰草門禁 Pro 終身買斷）與恢復購買",
+          "paragraphs": [
+            "核心實體門禁與基礎解鎖功能免費提供。應用提供一次性非消耗型內購「碰草門禁 Pro（終身買斷）」，用於解鎖同日魔鬼加碼、防反悔規則鎖、防解除安裝保護、睡前與工作自動排程、全部運動姿勢及史詩/傳說收藏卡高畫質匯出。",
+            "所有付款、驗證、恢復購買與退款/撤銷狀態同步均由 Apple App Store / StoreKit 2 處理，開發者不取得你的付款卡資訊或 Apple 帳號密碼。Apple 依其隱私權政策（https://www.apple.com/legal/privacy/）處理交易並可能向開發者提供交易通知及銷售統計報告。"
+          ]
+        },
+        {
+          "title": "6. 本機通知、第三方 SDK 與資料管理",
           "paragraphs": [
             "所有提醒均由本機通知中心觸發，無遠端推播伺服器；分享海報由本機即時繪製並僅在你點擊分享時交由 iOS 系統分享面板處理。",
             "本應用不整合任何廣告 SDK、分析埋點或跨應用追蹤框架。本隱私網頁託管於 GitHub Pages，適用 GitHub 隱私權聲明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。你隨時可在應用內清空資料或解除安裝移除全部本機資料，如有疑問請透過 https://ai-topic.cn 聯繫 Wang xiaohu 並註明「碰草門禁（TouchGate）」。"
@@ -196,7 +217,14 @@
           ]
         },
         {
-          "title": "5. 第三者 SDK・データ削除・お問い合わせ",
+          "title": "5. アプリ内課金（タッチゲート Pro 買い切り版）と購入復元",
+          "paragraphs": [
+            "基本的な物理アプリロックとチャレンジ機能は無料で利用できます。回数増量、ルール改ざん防止、自動スケジュール、追加エクササイズおよび限定カード書き出しを解放する一回限りの買い切り型アプリ内課金（タッチゲート Pro）を提供しています。",
+            "決済、購入検証、復元および返金・取り消し状態の同期はすべて Apple App Store / StoreKit 2 により処理され、開発者がクレジットカード情報や Apple アカウント資格情報を取得することはありません。取引処理および売上レポート・取引通知の提供には Apple プライバシーポリシー（https://www.apple.com/legal/privacy/）が適用されます。"
+          ]
+        },
+        {
+          "title": "6. 第三者 SDK・データ削除・お問い合わせ",
           "paragraphs": [
             "本アプリは広告 SDK、行動解析ツール、クロスアプリトラッキングを一切含みません。本ポリシーページは GitHub Pages 上でホストされており、GitHub のプライバシーステートメント（https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement）が適用されます。",
             "アプリ内の履歴削除またはアプリアンインストールにより端末内データをすべて削除できます。お問い合わせはサポート URL（https://ai-topic.cn）より開発者 Wang xiaohu まで「TouchGate」と明記の上ご連絡ください。"
