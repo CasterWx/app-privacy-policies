@@ -8,12 +8,12 @@
   "languages": {
     "zh-Hans": {
       "label": "简体中文",
-      "appName": "PurrTouch",
+      "appName": "摸了个猫",
       "title": "隐私政策",
       "dateLabel": "生效与更新日期",
       "developerLabel": "开发者",
       "supportLabel": "技术支持与隐私联系",
-      "intro": "本政策适用于 Wang xiaohu 提供的 iOS / iPadOS 应用「PurrTouch」（含桌面与锁屏小组件扩展 PurrTouchWidgets）。本政策如实说明应用如何处理本地偏好与陪伴手账数据、如何使用设备陀螺仪与音频能力、如何执行版本更新检测，以及你如何管理自己的本地数据。",
+      "intro": "本政策适用于 Wang xiaohu 提供的 iOS / iPadOS 应用「摸了个猫」（英文名 PurrTouch）（含桌面与锁屏小组件扩展 PurrTouchWidgets）。本政策如实说明应用如何处理本地偏好与陪伴手账数据、如何使用设备陀螺仪与音频能力、如何执行版本更新检测，以及你如何管理自己的本地数据。",
       "summary": "无需注册账号，核心体验 100% 本地离线运行。不请求相机、相册、定位、麦克风或通讯录权限；所有猫咪昵称、陪伴手账与偏好仅保存在你的设备本地及私有小组件共享组，开发者不运营用户数据服务器，不含任何广告或跨应用追踪。",
       "sections": [
         {
@@ -48,14 +48,14 @@
           "title": "5. 数据保存、删除与联系",
           "paragraphs": [
             "你的所有偏好设置、猫咪昵称、陪伴手账与小组件快照均仅保存在你的设备本地存储中。你可随时从系统卸载 PurrTouch 以彻底清除全部本地数据；开发者没有服务器端备份，无法访问、恢复或远程删除你的本地数据。",
-            "如对本隐私政策有任何疑问或建议，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「PurrTouch」。请勿在咨询中发送敏感个人凭据。"
+            "如对本隐私政策有任何疑问或建议，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「摸了个猫（PurrTouch）」。请勿在咨询中发送敏感个人凭据。"
           ]
         }
       ]
     },
     "en": {
       "label": "English",
-      "appName": "PurrTouch",
+      "appName": "PurrTouch (摸了个猫)",
       "title": "Privacy Policy",
       "dateLabel": "Effective and updated",
       "developerLabel": "Developer",
@@ -102,12 +102,12 @@
     },
     "zh-Hant": {
       "label": "繁體中文",
-      "appName": "PurrTouch",
+      "appName": "摸了個貓（PurrTouch）",
       "title": "隱私權政策",
       "dateLabel": "生效與更新日期",
       "developerLabel": "開發者",
       "supportLabel": "技術支援與隱私聯絡",
-      "intro": "本政策適用於 Wang xiaohu 提供的 iOS / iPadOS 應用程式「PurrTouch」（含桌面與鎖定畫面小工具延伸功能 PurrTouchWidgets）。本政策說明應用程式如何於本機保存偏好設定與陪伴手帳、如何使用裝置動作感測器與音訊能力、如何檢查版本更新，以及你如何管理本機資料。",
+      "intro": "本政策適用於 Wang xiaohu 提供的 iOS / iPadOS 應用程式「摸了個貓」（PurrTouch）（含桌面與鎖定畫面小工具延伸功能 PurrTouchWidgets）。本政策說明應用程式如何於本機保存偏好設定與陪伴手帳、如何使用裝置動作感測器與音訊能力、如何檢查版本更新，以及你如何管理本機資料。",
       "summary": "無須註冊帳號，核心體驗 100% 於裝置本機離線運作。不要求相機、相簿、定位、麥克風或聯絡人權限；所有貓咪暱稱、陪伴手帳與偏好皆僅存於你的裝置本機及私有小工具共享群組，開發者不營運資料伺服器，亦不含任何廣告或跨 App 追蹤。",
       "sections": [
         {
