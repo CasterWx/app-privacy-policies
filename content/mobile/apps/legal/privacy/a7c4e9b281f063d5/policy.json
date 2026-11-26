@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "slug": "purrtouch",
+  "effectiveDate": "2026-11-26",
+  "developer": "Wang xiaohu",
+  "supportUrl": "https://ai-topic.cn",
+  "defaultLanguage": "zh-Hans",
+  "languages": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "appName": "PurrTouch",
+      "title": "隐私政策",
+      "dateLabel": "生效与更新日期",
+      "developerLabel": "开发者",
+      "supportLabel": "技术支持与隐私联系",
+      "intro": "本政策适用于 Wang xiaohu 提供的 iOS / iPadOS 应用「PurrTouch」（含桌面与锁屏小组件扩展 PurrTouchWidgets）。本政策如实说明应用如何处理本地偏好与陪伴手账数据、如何使用设备陀螺仪与音频能力、如何执行版本更新检测，以及你如何管理自己的本地数据。",
+      "summary": "无需注册账号，核心体验 100% 本地离线运行。不请求相机、相册、定位、麦克风或通讯录权限；所有猫咪昵称、陪伴手账与偏好仅保存在你的设备本地及私有小组件共享组，开发者不运营用户数据服务器，不含任何广告或跨应用追踪。",
+      "sections": [
+        {
+          "title": "1. 本地偏好与陪伴手账数据",
+          "paragraphs": [
+            "为记住你的使用习惯与陪伴记录，PurrTouch 仅在你的设备本地（UserDefaults）保存所选猫咪品种、画风、视角、光影氛围、体格比例、感官与助眠设置，以及你主动输入的猫咪昵称、每日/累计抚摸与呼噜时长、抚摸距离、部位偏好与已解锁的亲密瞬间。",
+            "当你添加桌面或锁屏小组件时，应用会通过苹果私有 App Group 容器（group.com.xiaohuwang.purrtouch）在主应用与 PurrTouchWidgets 扩展之间同步轻量快照（当前猫咪、昵称、亲密阶段、性格标签、今日相伴时长与近 7 天节律），所有数据严格停留在你的设备内，不上传至任何服务器。"
+          ]
+        },
+        {
+          "title": "2. 设备运动传感器、音频与触觉反馈",
+          "paragraphs": [
+            "当你切换至「3D 绒毛」画风时，应用会实时读取设备的 CoreMotion 重力/倾角姿态数据，仅用于在屏幕上呈现柔和的视角微视差效果。姿态数据全程在内存中瞬时计算，绝不记录、存储或发送至设备之外。",
+            "应用使用 AVAudioEngine 与 Core Haptics 在设备本地播放内置公有领域猫咪录音、合成窗外环境音并驱动 Taptic Engine 触觉反馈。当你启用助眠定时器时，应用通过系统后台音频能力在锁屏期间持续播放呼噜声与环境音并在最后 60 秒平滑淡出。本应用不请求麦克风权限，不会录制任何声音。"
+          ]
+        },
+        {
+          "title": "3. 可选版本更新检测与系统评分",
+          "paragraphs": [
+            "为在有新版本发布时提醒你更新，应用在联网状态下至多每 24 小时一次（或由你手动点击「检查更新」时）向 Apple 官方公开接口（itunes.apple.com/lookup）查询 PurrTouch 的线上版本号与商店链接。该请求仅包含应用 Bundle ID 与地区代码，不发送任何个人身份信息、设备标识符或手账内容；离线时静默跳过，不影响正常使用。",
+            "在达到自然陪伴里程碑后，应用可能调用 Apple 系统原生评分弹窗（StoreKit AppStore.requestReview），评分交互由 Apple 依据其隐私政策处理，详见：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "4. 零广告、零第三方追踪与网页托管",
+          "paragraphs": [
+            "PurrTouch 当前完全免费，无内购、无广告，未集成任何广告 SDK、第三方统计分析或跨应用追踪框架，亦不出售或共享任何个人信息。Apple 可能根据你的 iOS 诊断与分析设置向开发者提供匿名汇总的崩溃与性能报告。",
+            "本隐私政策网页托管于 GitHub Pages，不含广告、统计脚本或我们设置的 Cookie；访问网页时 GitHub 可能为保障服务安全记录标准服务器访问日志，详见 GitHub 隐私声明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。"
+          ]
+        },
+        {
+          "title": "5. 数据保存、删除与联系",
+          "paragraphs": [
+            "你的所有偏好设置、猫咪昵称、陪伴手账与小组件快照均仅保存在你的设备本地存储中。你可随时从系统卸载 PurrTouch 以彻底清除全部本地数据；开发者没有服务器端备份，无法访问、恢复或远程删除你的本地数据。",
+            "如对本隐私政策有任何疑问或建议，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「PurrTouch」。请勿在咨询中发送敏感个人凭据。"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "English",
+      "appName": "PurrTouch",
+      "title": "Privacy Policy",
+      "dateLabel": "Effective and updated",
+      "developerLabel": "Developer",
+      "supportLabel": "Support and privacy contact",
+      "intro": "This policy applies to PurrTouch (including its Home Screen and Lock Screen widget extension, PurrTouchWidgets), an iOS and iPadOS app provided by Wang xiaohu. It explains how local preferences and Companion Journal records are stored, how on-device motion sensors and audio are used, how version checks work, and how you control your data.",
+      "summary": "No account required; core petting and sleep features run 100% locally on your device. PurrTouch never requests Camera, Photos, Location, Microphone, or Contacts permissions. All nicknames, Companion Journal stats, and settings stay solely on your device with zero ads, zero analytics SDKs, and zero cross-app tracking.",
+      "sections": [
+        {
+          "title": "1. Local preferences and Companion Journal",
+          "paragraphs": [
+            "To remember your favorite setup and quiet companion history, PurrTouch stores your selected cat breed, visual style, viewpoint, ambience theme, body proportions, sensory and sleep settings, custom cat nicknames, daily and cumulative petting/purring durations, stroke distance, zone preferences, and unlocked milestones locally in on-device UserDefaults.",
+            "When you add Home Screen or Lock Screen widgets, the app shares a lightweight summary snapshot (selected breed, custom nickname, bond stage, personality tag, today’s calm duration, and 7-day rhythm) exclusively between PurrTouch and PurrTouchWidgets through Apple’s private App Group container (group.com.xiaohuwang.purrtouch). None of this data leaves your device."
+          ]
+        },
+        {
+          "title": "2. Device motion sensor, audio, and haptics",
+          "paragraphs": [
+            "When you choose the 3D Plush visual style, PurrTouch reads real-time CoreMotion gravity and tilt orientation strictly on-device to render subtle parallax depth. Motion values are processed transiently in memory and are never recorded, stored, or transmitted.",
+            "PurrTouch uses AVAudioEngine and Core Haptics locally to play bundled public-domain feline audio samples, synthesize window soundscapes, and drive tactile feedback. When the Sleep Fade-Out Timer is active, background audio playback is used solely to keep purrs and ambient soundscapes playing smoothly while locked until fade-out completes. The app never requests microphone permission and never records audio."
+          ]
+        },
+        {
+          "title": "3. Optional App Store version check and native ratings",
+          "paragraphs": [
+            "To let you know when an update is available, PurrTouch may query Apple’s public iTunes Lookup endpoint (itunes.apple.com/lookup) at most once every 24 hours—or whenever you manually tap Check for Updates—using only the app’s Bundle ID and region code. No personal information, device identifiers, or journal data are transmitted, and the check fails silently offline.",
+            "After natural usage milestones, the app may invoke Apple’s native StoreKit review prompt (AppStore.requestReview), which is handled directly by Apple under Apple’s Privacy Policy: https://www.apple.com/legal/privacy/."
+          ]
+        },
+        {
+          "title": "4. No ads, no third-party tracking, and page hosting",
+          "paragraphs": [
+            "PurrTouch includes no ads, no third-party analytics SDKs, and no cross-app tracking frameworks, and never sells or shares personal data. Apple may share anonymized, aggregated crash and performance diagnostics based on your iOS system settings.",
+            "This privacy policy page is hosted on GitHub Pages without ads, analytics scripts, or cookies set by us. GitHub may process standard server request logs under its privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement."
+          ]
+        },
+        {
+          "title": "5. Retention, deletion, and contact",
+          "paragraphs": [
+            "All preferences, custom cat names, Companion Journal entries, and widget snapshots remain solely on your device. Uninstalling PurrTouch from iOS or iPadOS removes all local app data permanently. The developer maintains no server-side copies and cannot remotely access or recover local data.",
+            "For privacy questions or support requests, contact Wang xiaohu via https://ai-topic.cn and reference PurrTouch. Please do not include sensitive personal credentials in support inquiries."
+          ]
+        }
+      ]
+    },
+    "zh-Hant": {
+      "label": "繁體中文",
+      "appName": "PurrTouch",
+      "title": "隱私權政策",
+      "dateLabel": "生效與更新日期",
+      "developerLabel": "開發者",
+      "supportLabel": "技術支援與隱私聯絡",
+      "intro": "本政策適用於 Wang xiaohu 提供的 iOS / iPadOS 應用程式「PurrTouch」（含桌面與鎖定畫面小工具延伸功能 PurrTouchWidgets）。本政策說明應用程式如何於本機保存偏好設定與陪伴手帳、如何使用裝置動作感測器與音訊能力、如何檢查版本更新，以及你如何管理本機資料。",
+      "summary": "無須註冊帳號，核心體驗 100% 於裝置本機離線運作。不要求相機、相簿、定位、麥克風或聯絡人權限；所有貓咪暱稱、陪伴手帳與偏好皆僅存於你的裝置本機及私有小工具共享群組，開發者不營運資料伺服器，亦不含任何廣告或跨 App 追蹤。",
+      "sections": [
+        {
+          "title": "1. 本機偏好與陪伴手帳資料",
+          "paragraphs": [
+            "為記住你的習慣與陪伴紀錄，PurrTouch 僅於裝置本機（UserDefaults）保存所選貓咪品種、畫風、視角、光影氛圍、體格比例、感官與助眠設定，以及你自行輸入的貓咪暱稱、每日與累計撫摸／呼嚕時長、撫摸距離、部位偏好與已解鎖的親密瞬間。",
+            "當你加入桌面或鎖定畫面小工具時，應用程式透過 Apple 私有 App Group 容器（group.com.xiaohuwang.purrtouch）在主程式與 PurrTouchWidgets 之間同步輕量摘要快照，所有資料皆嚴格留存在你的裝置內，絕不上傳至任何伺服器。"
+          ]
+        },
+        {
+          "title": "2. 裝置動作感測器、音訊與觸覺回饋",
+          "paragraphs": [
+            "切換至「3D 絨毛」畫風時，應用程式僅於本機即時讀取 CoreMotion 重力與傾角資料以呈現柔和視差，數據於記憶體內即時計算，絕不記錄、儲存或傳出裝置。",
+            "應用程式使用 AVAudioEngine 與 Core Haptics 於本機播放內建公有領域貓咪錄音與即時合成窗外環境音，並於開啟助眠定時器時透過系統背景音訊於鎖定畫面平緩淡出。本應用程式不要求麥克風權限，絕不錄製任何聲音。"
+          ]
+        },
+        {
+          "title": "3. 選用版本檢查與系統評分",
+          "paragraphs": [
+            "為提醒新版本發佈，應用程式於聯網狀態下至多每 24 小時一次（或由你手動點擊檢查更新時）向 Apple 官方公開介面（itunes.apple.com/lookup）查詢 PurrTouch 版本資訊，僅傳送 Bundle ID 與地區代碼，不含任何個人識別資料；離線時靜默略過。",
+            "達成自然陪伴里程碑後，應用程式可能呼叫 Apple 原生評分視窗（StoreKit AppStore.requestReview），適用 Apple 隱私權政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "4. 零廣告、零追蹤與網頁託管",
+          "paragraphs": [
+            "PurrTouch 無廣告、未整合任何第三方分析或跨 App 追蹤框架，亦不販售或分享個人資料。Apple 可能依你的系統設定提供匿名彙總之當機與效能診斷。",
+            "本隱私權網頁託管於 GitHub Pages，不含廣告、統計指令碼或我們設定的 Cookie；連線紀錄適用 GitHub 隱私聲明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。"
+          ]
+        },
+        {
+          "title": "5. 資料保存、刪除與聯絡",
+          "paragraphs": [
+            "所有偏好、貓咪暱稱、陪伴手帳與小工具快照皆僅保存於你的裝置本機。卸載 PurrTouch 即可徹底移除全部本機資料；開發者沒有伺服器端備份，無法遠端存取或復原你的資料。",
+            "如有任何隱私問題，請透過技術支援網址 https://ai-topic.cn 聯絡開發者 Wang xiaohu，並註明「PurrTouch」。"
+          ]
+        }
+      ]
+    }
+  }
+}

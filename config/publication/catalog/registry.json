@@ -48,6 +48,12 @@
       "name": "碰草门禁 · TouchGate",
       "source": "content/mobile/apps/legal/privacy/e6b9c3a47f2d8150/policy.json",
       "publicPath": "documents/mobile/apps/legal/privacy/e6b9c3a47f2d8150"
+    },
+    {
+      "slug": "purrtouch",
+      "name": "PurrTouch",
+      "source": "content/mobile/apps/legal/privacy/a7c4e9b281f063d5/policy.json",
+      "publicPath": "documents/mobile/apps/legal/privacy/a7c4e9b281f063d5"
     }
   ]
 }
