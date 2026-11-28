@@ -54,6 +54,12 @@
       "name": "摸了个猫 · PurrTouch",
       "source": "content/mobile/apps/legal/privacy/a7c4e9b281f063d5/policy.json",
       "publicPath": "documents/mobile/apps/legal/privacy/a7c4e9b281f063d5"
+    },
+    {
+      "slug": "studiopulse",
+      "name": "StudioPulse",
+      "source": "content/mobile/apps/legal/privacy/b3f9c6d24e8a1075/policy.json",
+      "publicPath": "documents/mobile/apps/legal/privacy/b3f9c6d24e8a1075"
     }
   ]
 }

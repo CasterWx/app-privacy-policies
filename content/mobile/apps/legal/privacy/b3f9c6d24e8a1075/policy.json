@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "slug": "studiopulse",
+  "effectiveDate": "2026-11-28",
+  "developer": "Wang xiaohu",
+  "supportUrl": "https://ai-topic.cn",
+  "defaultLanguage": "zh-Hans",
+  "languages": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "appName": "StudioPulse",
+      "title": "隐私政策",
+      "dateLabel": "生效与更新日期",
+      "developerLabel": "开发者",
+      "supportLabel": "技术支持与隐私联系",
+      "intro": "本政策适用于 Wang xiaohu 提供的 Apple 平台应用「StudioPulse」（Bundle ID：com.xiaohuwang.StudioPulseApp，适用于 iOS / iPadOS / macOS，含桌面与锁屏小组件扩展）。本政策基于应用实际代码数据流，如实说明你的 App Store Connect 密钥与营收数据的端侧处理方式、可选零留存实时推送中继、可选自托管模式、应用内购买以及你的数据控制权。",
+      "summary": "采用纯端侧 BYOK（自带密钥）架构，无需注册开发者账号。你的 App Store Connect .p8 私钥、Key ID、Issuer ID 与供应商编号仅存于设备系统钥匙串（Keychain），绝不上传至开发者服务器；所有销售、订阅、榜单与评论缓存均保留在设备本地。可选的实时推送中继采用零留存盲转设计，不接触私钥、不存储任何交易记录。零广告、零第三方分析 SDK、零跨应用追踪。",
+      "sections": [
+        {
+          "title": "1. 纯端侧 BYOK 架构与本地数据存储",
+          "paragraphs": [
+            "StudioPulse 默认以纯本地直连模式运行。你导入的 App Store Connect API 凭据（Key ID、Issuer ID、.p8 私钥内容、供应商编号）以及可选的中继管理密钥或自托管令牌，均仅加密保存于设备系统钥匙串（Keychain，访问级别为仅限本设备首次解锁后访问，并按工作室配置隔离），绝不会上传至开发者服务器。",
+            "ES256 JWT 签名完全在你的设备本地通过 Apple CryptoKit 计算完成。应用直接由你的设备向 Apple 官方 App Store Connect REST API（api.appstoreconnect.apple.com）、Apple 公开 iTunes Lookup / Search / RSS 榜单接口（itunes.apple.com）以及公开汇率接口（open.er-api.com，仅用于拉取公开多币种参考汇率）发起请求，不经过开发者中转。",
+            "拉取到的销售报表、订阅汇总与事件、App 榜单历史、用户评论缓存、工作室配置及小组件快照，均严格保存在你的设备本地沙盒及 Apple 私有 App Group 容器（group.com.xiaohuwang.studiopulse.app）内，用于主应用与小组件扩展同步显示。你开启后台巡检与本地通知（BGAppRefreshTask / UNUserNotificationCenter）时，审核状态变动、冲榜与低星评论提醒均在设备本地计算并触发。"
+          ]
+        },
+        {
+          "title": "2. 可选「零留存实时推送中继」服务",
+          "paragraphs": [
+            "实时推送功能默认关闭，仅在你主动开启并点击开通专属推送路由时，应用才会连接官方零留存推送中继服务（studiopulse-relay.studio-payment-hub.workers.dev，部署于 Cloudflare Workers 与 D1）。",
+            "该中继服务仅存储完成消息路由所必需的最少配置数据：随机生成的租户路由 ID 与不可猜测的 Webhook 令牌、管理密钥的 SHA-256 哈希值（不存明文）、自定义工作室显示名、可选的 Apple 远程推送设备令牌（APNs Device Token，仅在你授权推送通知后用于下发 iOS 推送）、你主动填写的外部 Webhook 通知地址与签名密钥（如飞书、钉钉、企业微信、Bark、Slack、Discord 或自定义 HTTPS Webhook），以及基础运行计数（转发次数、最近事件时间戳）和短周期限流计数（用于防止接口滥用）。",
+            "中继服务绝不索取、绝不接触你的 .p8 私钥，且绝不在数据库中持久化存储任何订单金额、商品明细、交易单号或销售流水。当 Apple 向你的专属 Webhook 地址发送 App Store 服务器通知（ASSN V2）时，中继仅在内存中依据 Apple Root CA - G3 证书链验证 JWS 签名，格式化消息并实时转发至你配置的接收渠道或 APNs 后立即丢弃原始交易数据。你可随时在应用内一键轮换 Webhook 地址，或点击「注销并删除云端推送路由」立即彻底删除云端路由记录与本地密钥。"
+          ]
+        },
+        {
+          "title": "3. 可选自托管云端模式",
+          "paragraphs": [
+            "如果你在设置中主动切换至「自托管云端」模式，应用仅会连接你自己填写并控制的私有服务器地址与访问令牌。自托管服务器上的数据存储与处理完全由你的自有部署决定，开发者无法访问该服务器或其中的数据。"
+          ]
+        },
+        {
+          "title": "4. 应用内购买与订阅（StudioPulse Pro）",
+          "paragraphs": [
+            "StudioPulse 提供可选的「StudioPulse Pro」应用内购买方案（包括按月订阅、按年订阅及一次性终身买断），所有支付结算、票据校验、恢复购买以及退款或权益撤销同步均由 Apple App Store 与 StoreKit 2 独家处理。开发者不会获取你的银行卡号、账单地址或 Apple 账户密码。",
+            "Apple 依据其隐私政策处理交易，并可能向开发者（Wang xiaohu）提供标准的 App Store 服务器通知（ASSN V2）及汇总销售报告，详情请参阅 Apple 隐私政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "5. 版本更新检测、原生评分、零广告与零追踪",
+          "paragraphs": [
+            "为在发布新版本时提醒你升级，应用在联网状态下至多每 24 小时一次（或由你手动点击检查更新时）向 Apple 公开接口（itunes.apple.com/lookup）查询 StudioPulse 的线上版本号与商店链接，仅发送 Bundle ID 与地区代码，不含任何个人身份信息或营收数据。在达成自然使用里程碑后，应用可能调用 Apple 原生评分窗口（AppStore.requestReview），交互由 Apple 处理。",
+            "StudioPulse 不集成任何第三方广告 SDK、统计分析埋点或跨应用追踪框架（隐私清单声明 NSPrivacyTracking = false），绝不出售或共享你的个人信息。Apple 可能依据你的设备诊断与分析设置向开发者提供匿名汇总的崩溃与性能报告。",
+            "本隐私政策网页托管于 GitHub Pages，不含广告、统计脚本或我们设置的 Cookie；访问网页时 GitHub 可能记录基础服务器安全日志，详见 GitHub 隐私声明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。"
+          ]
+        },
+        {
+          "title": "6. 数据保存、删除与联系我们",
+          "paragraphs": [
+            "你的全部本地密钥、销售账本、榜单历史、评论缓存与小组件数据均保存在你自己的设备中。你可随时在应用内删除特定工作室配置、注销并彻底删除可选的云端推送路由，或直接卸载应用以清除本机全部应用数据。开发者不持有你的本地密钥或账本备份，无法访问或代为恢复。",
+            "如对本隐私政策有任何疑问或需要技术支持，请通过技术支持网址 https://ai-topic.cn 联系开发者 Wang xiaohu，并注明涉及「StudioPulse」。请勿在联系内容中发送 .p8 私钥、管理密钥或其他敏感凭据。"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "English",
+      "appName": "StudioPulse",
+      "title": "Privacy Policy",
+      "dateLabel": "Effective and updated",
+      "developerLabel": "Developer",
+      "supportLabel": "Support and privacy contact",
+      "intro": "This policy applies to StudioPulse (Bundle ID: com.xiaohuwang.StudioPulseApp), an iOS, iPadOS, and macOS app provided by Wang xiaohu, including its Home Screen and Lock Screen Widget extension. Based strictly on the app’s actual code and data flows, it explains how your App Store Connect credentials and analytics stay on-device, how the optional Zero-Retention Push Relay and Self-Hosted Hub mode work, how StoreKit 2 purchases are processed, and how you control your data.",
+      "summary": "Pure on-device BYOK (Bring Your Own Key) architecture with no developer account required. Your App Store Connect .p8 private keys, Key ID, Issuer ID, and Vendor Number are stored exclusively in your device’s system Keychain and are never uploaded to developer servers. All sales, subscription, ranking, and review caches stay on-device. The optional Real-Time Push Relay is zero-retention—it never accesses .p8 keys and never stores financial records. Zero ads, zero analytics SDKs, and zero cross-app tracking.",
+      "sections": [
+        {
+          "title": "1. Pure On-Device BYOK Architecture and Local Storage",
+          "paragraphs": [
+            "By default, StudioPulse operates in pure on-device direct-connect mode. Your App Store Connect API credentials (Key ID, Issuer ID, .p8 private key PEM, and Vendor Number), along with optional Relay management secrets or Self-Hosted Hub tokens, are stored exclusively in your device’s system Keychain (accessible only after first unlock on this device, isolated per studio profile) and are never uploaded to developer servers.",
+            "ES256 JWT signing is performed strictly on-device using Apple CryptoKit. Your device communicates directly with Apple’s official App Store Connect REST API (api.appstoreconnect.apple.com), Apple’s public iTunes Lookup, Search, and RSS Top 200 endpoints (itunes.apple.com), and a public currency exchange-rate endpoint (open.er-api.com, used solely for public multi-currency reference rates) without routing through developer servers.",
+            "Downloaded sales reports, subscription summaries and events, ranking histories, customer review caches, studio profiles, and widget snapshots remain strictly inside your device’s private app sandbox and Apple App Group container (group.com.xiaohuwang.studiopulse.app) to keep the main app and Widget extension synchronized. Optional background auto-patrol (BGAppRefreshTask) and local notifications (UNUserNotificationCenter) for review status changes, Top 200 movers, and low-star reviews run entirely on-device."
+          ]
+        },
+        {
+          "title": "2. Optional Zero-Retention Push Relay",
+          "paragraphs": [
+            "Real-Time Push Notifications are disabled by default and are only activated if you explicitly enable and provision a dedicated push route on the official Zero-Retention Push Relay (studiopulse-relay.studio-payment-hub.workers.dev, hosted on Cloudflare Workers and D1).",
+            "When enabled, the relay stores only the minimal routing configuration needed to deliver alerts: a randomly generated tenant route ID and unguessable webhook token, a SHA-256 hash of your management secret (never stored in plaintext), your display label, your optional APNs device token (when iOS push alerts are enabled), the outbound webhook URLs and optional signing secrets you configure (such as Feishu, DingTalk, WeCom, Bark, Slack, Discord, or a generic HTTPS webhook), plus basic operational counters (forward count, last event timestamp) and short-window IP/token rate-limit counters to prevent abuse.",
+            "The relay never requests or accesses your .p8 private keys and never persists financial transaction amounts, order IDs, customer details, or sales ledgers. When Apple sends an App Store Server Notifications V2 payload to your route, the relay verifies Apple’s JWS signature against Apple Root CA - G3 in memory, formats and forwards the alert to your configured channels or APNs, and discards the transaction payload immediately. You may rotate your webhook URL or permanently delete your cloud route (erasing the server routing record and local relay secrets) at any time from inside the app."
+          ]
+        },
+        {
+          "title": "3. Optional Self-Hosted Hub Mode",
+          "paragraphs": [
+            "If you explicitly choose Self-Hosted Hub mode in Settings, StudioPulse connects solely to the server URL and API token that you supply. Data processing on your self-hosted server is controlled entirely by your own deployment; the developer has no access to your self-hosted server or its data."
+          ]
+        },
+        {
+          "title": "4. In-App Purchases and Subscriptions (StudioPulse Pro)",
+          "paragraphs": [
+            "StudioPulse offers optional Pro plans (Monthly Subscription, Yearly Subscription, and Lifetime Buyout) via Apple StoreKit 2. All payment processing, receipt verification, purchase restoration, and refund or revocation synchronization are handled exclusively by Apple App Store. The developer never receives your payment card details or Apple Account credentials.",
+            "Apple processes transactions under Apple’s Privacy Policy and provides standard App Store Server Notifications V2 and aggregated sales reports to the developer (Wang xiaohu). See Apple’s Privacy Policy: https://www.apple.com/legal/privacy/."
+          ]
+        },
+        {
+          "title": "5. Version Checks, Native Ratings, Zero Ads, and Zero Tracking",
+          "paragraphs": [
+            "To notify you when a new version is available, StudioPulse may query Apple’s public iTunes Lookup endpoint (itunes.apple.com/lookup) at most once every 24 hours—or whenever you tap Check for Updates—using only the app’s Bundle ID and region code, with no personal identifiers or business data sent. After natural usage milestones, the app may invoke Apple’s native rating prompt (AppStore.requestReview), which is handled directly by Apple.",
+            "StudioPulse contains zero third-party advertising SDKs, zero analytics/telemetry SDKs, and zero cross-app tracking frameworks (NSPrivacyTracking = false), and never sells or shares personal data. Apple may provide anonymized, aggregated crash and performance diagnostics based on your device settings.",
+            "This privacy policy page is hosted on GitHub Pages without ads, analytics scripts, or cookies set by us. Standard server access logs are governed by GitHub’s privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement."
+          ]
+        },
+        {
+          "title": "6. Data Retention, Deletion, and Contact",
+          "paragraphs": [
+            "All local credentials, sales ledgers, ranking histories, review caches, and widget snapshots remain solely on your device. You can delete individual studio profiles, revoke and delete your optional cloud push route inside the app at any time, or uninstall StudioPulse to remove all local app data. Because the developer holds no server-side copies of your local keys or ledgers, we cannot access or recover them remotely.",
+            "For privacy questions or support, please contact Wang xiaohu via https://ai-topic.cn and reference StudioPulse. Never send .p8 private keys, management secrets, or sensitive credentials in support inquiries."
+          ]
+        }
+      ]
+    },
+    "zh-Hant": {
+      "label": "繁體中文",
+      "appName": "StudioPulse",
+      "title": "隱私權政策",
+      "dateLabel": "生效與更新日期",
+      "developerLabel": "開發者",
+      "supportLabel": "技術支援與隱私聯繫",
+      "intro": "本政策適用於 Wang xiaohu 提供的 Apple 平台應用程式「StudioPulse」（Bundle ID：com.xiaohuwang.StudioPulseApp，支援 iOS / iPadOS / macOS，含桌面與鎖定畫面小工具延伸功能）。本政策依據應用程式實際程式碼資料流，如實說明 App Store Connect 金鑰與營收資料的本機處理方式、選用零留存即時推播中繼、選用自託管模式、應用程式內購買以及你的資料控制權。",
+      "summary": "採用純端側 BYOK（自帶金鑰）架構，無需註冊開發者帳號。你的 App Store Connect .p8 私鑰、Key ID、Issuer ID 與供應商編號僅儲存於裝置系統鑰匙圈（Keychain），絕不上傳至開發者伺服器；所有銷售、訂閱、榜單與評論快取皆保留於裝置本機。選用的即時推播中繼採零留存盲轉設計，不接觸私鑰、不儲存交易紀錄。零廣告、零第三方分析 SDK、零跨 App 追蹤。",
+      "sections": [
+        {
+          "title": "1. 純端側 BYOK 架構與本機資料儲存",
+          "paragraphs": [
+            "StudioPulse 預設以純本機直連模式運作。你匯入的 App Store Connect API 憑證（Key ID、Issuer ID、.p8 私鑰內容、供應商編號）以及選用的中繼管理金鑰或自託管權杖，均僅加密保存於裝置系統鑰匙圈（Keychain，僅限本裝置首次解鎖後存取並依工作室設定隔離），絕不會上傳至開發者伺服器。",
+            "ES256 JWT 簽章完全於裝置本機透過 Apple CryptoKit 運算完成。應用程式直接由你的裝置連線至 Apple 官方 App Store Connect REST API（api.appstoreconnect.apple.com）、Apple 公開 iTunes Lookup / Search / RSS 榜單介面（itunes.apple.com）及公開匯率介面（open.er-api.com，僅用於取得公開多幣別參考匯率），不經開發者伺服器中轉。",
+            "下載的銷售報表、訂閱摘要與事件、榜單歷史、使用者評論快取、工作室設定與小工具快照，均嚴格留存於你的裝置沙盒與 Apple 私有 App Group 容器（group.com.xiaohuwang.studiopulse.app），以供主程式與小工具延伸功能同步顯示。背景巡檢（BGAppRefreshTask）與本機通知（UNUserNotificationCenter）亦皆於裝置本機執行。"
+          ]
+        },
+        {
+          "title": "2. 選用「零留存即時推播中繼」服務",
+          "paragraphs": [
+            "即時推播功能預設關閉，僅在你主動啟用並開通專屬推播路由時，應用程式才會連線至官方零留存推播中繼服務（studiopulse-relay.studio-payment-hub.workers.dev，部署於 Cloudflare Workers 與 D1）。",
+            "該中繼服務僅儲存訊息轉發所需的最小路由設定：隨機產生的租戶路由 ID 與不可猜測之 Webhook 權杖、管理金鑰的 SHA-256 雜湊值（不存明文）、工作室顯示名稱、選用的 APNs 裝置推播權杖、你主動設定的外部 Webhook 通知網址與簽章密鑰（如飛書、釘釘、企業微信、Bark、Slack、Discord 或通用 HTTPS Webhook），以及基本轉發計數、最近事件時間戳與短週期限流計數。",
+            "中繼服務絕不要求或接觸你的 .p8 私鑰，亦絕不於資料庫中儲存任何交易金額、訂單編號或銷售明細。當 Apple 向你的專屬路由傳送 App Store 伺服器通知（ASSN V2）時，中繼僅於記憶體內依據 Apple Root CA - G3 驗證 JWS 簽章，轉發通知至你的接收管道或 APNs 後即刻捨棄原始交易資料。你隨時可在應用程式內輪換 Webhook 網址，或一鍵註銷並永久刪除雲端推播路由。"
+          ]
+        },
+        {
+          "title": "3. 選用自託管雲端模式",
+          "paragraphs": [
+            "若你於設定中主動切換至「自託管雲端」模式，應用程式僅會連線至你自己提供的伺服器網址與存取權杖。自託管伺服器的資料處理由你的自有部署自行管理，開發者無法存取。"
+          ]
+        },
+        {
+          "title": "4. 應用程式內購買與訂閱（StudioPulse Pro）",
+          "paragraphs": [
+            "StudioPulse 透過 Apple StoreKit 2 提供選用的「StudioPulse Pro」方案（包含月付訂閱、年付訂閱與一次性終身買斷）。所有付款、驗證、恢復購買與退款或撤銷同步皆由 Apple App Store 獨家處理，開發者不會取得你的付款卡資訊或 Apple 帳號密碼。",
+            "Apple 依其隱私權政策處理交易，並可能向開發者（Wang xiaohu）提供標準的 App Store 伺服器通知（ASSN V2）與彙總銷售報告，詳見 Apple 隱私權政策：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "5. 版本檢查、原生評分、零廣告與零追蹤",
+          "paragraphs": [
+            "為提醒新版本發佈，應用程式於聯網狀態下至多每 24 小時一次（或手動點擊檢查更新時）向 Apple 公開介面（itunes.apple.com/lookup）查詢版本資訊，僅傳送 Bundle ID 與地區代碼，不含任何個人或營收資料。原生評分視窗（AppStore.requestReview）由 Apple 直接處理。",
+            "StudioPulse 不整合任何第三方廣告 SDK、統計分析 SDK 或跨 App 追蹤框架（NSPrivacyTracking = false），絕不販售或分享個人資料。Apple 可能依你的裝置診斷設定提供匿名彙總之當機與效能報告。",
+            "本隱私權網頁託管於 GitHub Pages，不含廣告、統計指令碼或我們設定的 Cookie；連線紀錄適用 GitHub 隱私權聲明：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。"
+          ]
+        },
+        {
+          "title": "6. 資料保存、刪除與聯絡我們",
+          "paragraphs": [
+            "所有本機金鑰、銷售帳本、榜單歷史、評論快取與小工具資料皆僅保存於你的裝置本機。你隨時可在應用程式內刪除工作室設定、註銷並刪除選用的雲端推播路由，或解除安裝應用程式以移除全部本機資料。",
+            "如有任何隱私疑問或技術支援需求，請透過技術支援網址 https://ai-topic.cn 聯繫開發者 Wang xiaohu，並註明涉及「StudioPulse」。請勿於來信中傳送 .p8 私鑰或其他敏感憑證。"
+          ]
+        }
+      ]
+    },
+    "ja": {
+      "label": "日本語",
+      "appName": "StudioPulse",
+      "title": "プライバシーポリシー",
+      "dateLabel": "発効・更新日",
+      "developerLabel": "開発者",
+      "supportLabel": "サポートおよびプライバシーに関するお問い合わせ",
+      "intro": "本ポリシーは、Wang xiaohu が提供する Apple プラットフォーム向けアプリ「StudioPulse」（Bundle ID：com.xiaohuwang.StudioPulseApp、iOS / iPadOS / macOS 対応、ホーム画面およびロック画面ウィジェット拡張機能を含む）に適用されます。実際のコード上のデータフローに基づき、App Store Connect 認証情報や売上データの端末内処理、任意のゼロ保持リアルタイムプッシュ中継、任意のセルフホストモード、アプリ内課金、およびデータ管理方法について透明にご説明します。",
+      "summary": "開発者アカウント登録不要の純粋な端末内 BYOK（自己鍵管理）アーキテクチャを採用しています。App Store Connect の .p8 秘密鍵、Key ID、Issuer ID、ベンダー番号は端末のシステムキーチェーン（Keychain）のみに保存され、開発者サーバーへ送信されることは一切ありません。売上・サブスクリプション・ランキング・レビューのキャッシュもすべて端末内に留まります。任意のプッシュ中継はゼロ保持設計であり、秘密鍵へアクセスせず取引履歴も保存しません。広告、第三者解析 SDK、クロスアプリ追跡は一切ありません。",
+      "sections": [
+        {
+          "title": "1. 純粋な端末内 BYOK アーキテクチャとローカル保存",
+          "paragraphs": [
+            "StudioPulse はデフォルトで純粋な端末内ダイレクト接続モードで動作します。お客様が設定した App Store Connect API 認証情報（Key ID、Issuer ID、.p8 秘密鍵 PEM、ベンダー番号）および任意の中継管理シークレットやセルフホスト用トークンは、端末のシステムキーチェーン（Keychain、当該端末の初回ロック解除後のみアクセス可能、スタジオプロファイル単位で分離）にのみ暗号化保存され、開発者サーバーへ送信されることはありません。",
+            "ES256 JWT 署名は Apple CryptoKit を用いて端末内のみで生成されます。通信はお客様の端末から Apple 公式の App Store Connect REST API（api.appstoreconnect.apple.com）、Apple 公開の iTunes Lookup / Search / RSS ランキングエンドポイント（itunes.apple.com）、および公開為替レート API（open.er-api.com、複数通貨の参考換算のみに使用）へ直接行われます。",
+            "取得した売上レポート、サブスクリプション集計・イベント、ランキング推移、カスタマーレビューキャッシュ、スタジオ設定およびウィジェット用スナップショットは、端末内のアプリサンドボックスおよび Apple のプライベート App Group コンテナ（group.com.xiaohuwang.studiopulse.app）のみに保存され、本体アプリとウィジェット拡張機能間で同期されます。任意のバックグラウンド巡回（BGAppRefreshTask）や審査状況・ランキング変動・低評価レビューのローカル通知（UNUserNotificationCenter）もすべて端末内で完結します。"
+          ]
+        },
+        {
+          "title": "2. 任意の「ゼロ保持リアルタイムプッシュ中継」サービス",
+          "paragraphs": [
+            "リアルタイムプッシュ通知は初期状態で無効となっており、お客様が明示的に有効化して専用ルートを開設した場合にのみ、公式のゼロ保持プッシュ中継サービス（studiopulse-relay.studio-payment-hub.workers.dev、Cloudflare Workers および D1 上で稼働）へ接続します。",
+            "本中継サービスが保持するのは通知転送に必要な最小限のルーティング設定のみです：ランダム生成されたテナントルート ID と推測不能な Webhook トークン、管理シークレットの SHA-256 ハッシュ（平文は保存しません）、表示用スタジオ名、任意の APNs デバイストークン（iOS プッシュ通知有効時）、お客様が指定した外部 Webhook 送信先 URL と署名シークレット（Feishu、DingTalk、WeCom、Bark、Slack、Discord、汎用 HTTPS Webhook 等）、ならびに不正利用防止のための基本稼働カウンター（転送回数、最終イベント時刻）および短時間レート制限カウンターです。",
+            "本中継サービスは .p8 秘密鍵を一切要求・参照せず、売上金額・注文 ID・顧客情報・販売台帳などの財務データを一切保存しません。Apple から専用ルートへ App Store サーバー通知（ASSN V2）が届いた際、中継はメモリ上で Apple Root CA - G3 に照らして JWS 署名を検証し、通知を整形してお客様の指定チャネルや APNs へ即時転送した直後に取引ペイロードを破棄します。アプリ内からいつでも Webhook URL のローテーション、またはクラウドルートの完全削除（D1 上のルーティング情報と端末内シークレットの消去）を行えます。"
+          ]
+        },
+        {
+          "title": "3. 任意のセルフホストハブモード",
+          "paragraphs": [
+            "設定から明示的に「セルフホスト」モードを選択した場合、本アプリはお客様自身が指定したサーバー URL と API トークンのみに接続します。セルフホストサーバー上のデータ管理はお客様ご自身の環境に委ねられ、開発者がアクセスすることはありません。"
+          ]
+        },
+        {
+          "title": "4. アプリ内課金およびサブスクリプション（StudioPulse Pro）",
+          "paragraphs": [
+            "StudioPulse は Apple StoreKit 2 を通じて任意の「StudioPulse Pro」プラン（月額サブスクリプション、年額サブスクリプション、買い切り型ライフタイム）を提供しています。決済処理、レシート検証、購入の復元、返金・権利取消の同期はすべて Apple App Store により処理され、開発者がクレジットカード情報や Apple アカウントの認証情報を取得することはありません。",
+            "取引は Apple プライバシーポリシーに従って処理され、Apple から開発者（Wang xiaohu）へ標準の App Store サーバー通知（ASSN V2）および集計売上レポートが提供されます。詳細は Apple プライバシーポリシーをご確認ください：https://www.apple.com/legal/privacy/。"
+          ]
+        },
+        {
+          "title": "5. バージョン確認・システム評価・広告なし・追跡なし",
+          "paragraphs": [
+            "新バージョン公開をお知らせするため、オンライン時に最大 24 時間に 1 回（またはお客様が手動でアップデート確認を実行した際）、Apple 公開エンドポイント（itunes.apple.com/lookup）へ Bundle ID と地域コードのみを送信して最新バージョンを確認する場合があります。自然な利用節目で表示される Apple ネイティブの評価ダイアログ（AppStore.requestReview）は Apple により直接処理されます。",
+            "StudioPulse には第三者広告 SDK、アナリティクス／テレメトリ SDK、クロスアプリ追跡フレームワーク（NSPrivacyTracking = false）は一切含まれておらず、個人データの販売・共有も行いません。端末の診断設定に基づき、Apple から匿名集計されたクラッシュおよびパフォーマンスレポートが提供される場合があります。",
+            "本プライバシーポリシーページは GitHub Pages 上で公開されており、広告、解析スクリプト、当方設定の Cookie は含みません。アクセス時の標準ログについては GitHub プライバシーステートメントをご確認ください：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement。"
+          ]
+        },
+        {
+          "title": "6. データの保持・削除およびお問い合わせ",
+          "paragraphs": [
+            "すべてのローカル認証情報、売上台帳、ランキング履歴、レビューキャッシュ、ウィジェットスナップショットはお客様の端末内のみに保存されます。アプリ内からいつでもスタジオプロファイルの削除や任意のクラウドプッシュルートの解約・完全削除が可能であり、アプリを削除することですべてのローカルデータが消去されます。",
+            "プライバシーに関するご質問やサポートのご要望は、サポート URL https://ai-topic.cn より「StudioPulse」と明記のうえ開発者 Wang xiaohu までお問い合わせください。お問い合わせの際は .p8 秘密鍵や管理シークレット等の機密情報を送信しないでください。"
+          ]
+        }
+      ]
+    }
+  }
+}

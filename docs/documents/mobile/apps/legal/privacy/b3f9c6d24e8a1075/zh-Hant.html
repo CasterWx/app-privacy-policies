@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="採用純端側 BYOK（自帶金鑰）架構，無需註冊開發者帳號。你的 App Store Connect .p8 私鑰、Key ID、Issuer ID 與供應商編號僅儲存於裝置系統鑰匙圈（Keychain），絕不上傳至開發者伺服器；所有銷售、訂閱、榜單與評論快取皆保留於裝置本機。選用的即時推播中繼採零留存盲轉設計，不接觸私鑰、不儲存交易紀錄。零廣告、零第三方分析 SDK、零跨 App 追蹤。">
+<title>StudioPulse — 隱私權政策</title>
+<link rel="stylesheet" href="../../../../../../style.css">
+</head>
+<body>
+<header class="site-header"><span>StudioPulse</span><span>Privacy / 隐私</span></header>
+<main id="main">
+<nav class="languages" aria-label="Language / 语言"><a href="zh-Hans.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a> <a href="en.html" lang="en" hreflang="en">English</a> <a href="zh-Hant.html" lang="zh-Hant" hreflang="zh-Hant" aria-current="page">繁體中文</a> <a href="ja.html" lang="ja" hreflang="ja">日本語</a></nav>
+<div class="eyebrow">StudioPulse</div>
+<h1>隱私權政策</h1>
+<p class="meta">生效與更新日期: <time datetime="2026-11-28">2026-11-28</time><br>開發者: Wang xiaohu</p>
+<p class="lead">本政策適用於 Wang xiaohu 提供的 Apple 平台應用程式「StudioPulse」（Bundle ID：com.xiaohuwang.StudioPulseApp，支援 iOS / iPadOS / macOS，含桌面與鎖定畫面小工具延伸功能）。本政策依據應用程式實際程式碼資料流，如實說明 App Store Connect 金鑰與營收資料的本機處理方式、選用零留存即時推播中繼、選用自託管模式、應用程式內購買以及你的資料控制權。</p>
+<aside class="summary">採用純端側 BYOK（自帶金鑰）架構，無需註冊開發者帳號。你的 App Store Connect .p8 私鑰、Key ID、Issuer ID 與供應商編號僅儲存於裝置系統鑰匙圈（Keychain），絕不上傳至開發者伺服器；所有銷售、訂閱、榜單與評論快取皆保留於裝置本機。選用的即時推播中繼採零留存盲轉設計，不接觸私鑰、不儲存交易紀錄。零廣告、零第三方分析 SDK、零跨 App 追蹤。</aside>
+<section aria-labelledby="section-1"><h2 id="section-1">1. 純端側 BYOK 架構與本機資料儲存</h2><p>StudioPulse 預設以純本機直連模式運作。你匯入的 App Store Connect API 憑證（Key ID、Issuer ID、.p8 私鑰內容、供應商編號）以及選用的中繼管理金鑰或自託管權杖，均僅加密保存於裝置系統鑰匙圈（Keychain，僅限本裝置首次解鎖後存取並依工作室設定隔離），絕不會上傳至開發者伺服器。</p><p>ES256 JWT 簽章完全於裝置本機透過 Apple CryptoKit 運算完成。應用程式直接由你的裝置連線至 Apple 官方 App Store Connect REST API（api.appstoreconnect.apple.com）、Apple 公開 iTunes Lookup / Search / RSS 榜單介面（itunes.apple.com）及公開匯率介面（open.er-api.com，僅用於取得公開多幣別參考匯率），不經開發者伺服器中轉。</p><p>下載的銷售報表、訂閱摘要與事件、榜單歷史、使用者評論快取、工作室設定與小工具快照，均嚴格留存於你的裝置沙盒與 Apple 私有 App Group 容器（group.com.xiaohuwang.studiopulse.app），以供主程式與小工具延伸功能同步顯示。背景巡檢（BGAppRefreshTask）與本機通知（UNUserNotificationCenter）亦皆於裝置本機執行。</p></section><section aria-labelledby="section-2"><h2 id="section-2">2. 選用「零留存即時推播中繼」服務</h2><p>即時推播功能預設關閉，僅在你主動啟用並開通專屬推播路由時，應用程式才會連線至官方零留存推播中繼服務（studiopulse-relay.studio-payment-hub.workers.dev，部署於 Cloudflare Workers 與 D1）。</p><p>該中繼服務僅儲存訊息轉發所需的最小路由設定：隨機產生的租戶路由 ID 與不可猜測之 Webhook 權杖、管理金鑰的 SHA-256 雜湊值（不存明文）、工作室顯示名稱、選用的 APNs 裝置推播權杖、你主動設定的外部 Webhook 通知網址與簽章密鑰（如飛書、釘釘、企業微信、Bark、Slack、Discord 或通用 HTTPS Webhook），以及基本轉發計數、最近事件時間戳與短週期限流計數。</p><p>中繼服務絕不要求或接觸你的 .p8 私鑰，亦絕不於資料庫中儲存任何交易金額、訂單編號或銷售明細。當 Apple 向你的專屬路由傳送 App Store 伺服器通知（ASSN V2）時，中繼僅於記憶體內依據 Apple Root CA - G3 驗證 JWS 簽章，轉發通知至你的接收管道或 APNs 後即刻捨棄原始交易資料。你隨時可在應用程式內輪換 Webhook 網址，或一鍵註銷並永久刪除雲端推播路由。</p></section><section aria-labelledby="section-3"><h2 id="section-3">3. 選用自託管雲端模式</h2><p>若你於設定中主動切換至「自託管雲端」模式，應用程式僅會連線至你自己提供的伺服器網址與存取權杖。自託管伺服器的資料處理由你的自有部署自行管理，開發者無法存取。</p></section><section aria-labelledby="section-4"><h2 id="section-4">4. 應用程式內購買與訂閱（StudioPulse Pro）</h2><p>StudioPulse 透過 Apple StoreKit 2 提供選用的「StudioPulse Pro」方案（包含月付訂閱、年付訂閱與一次性終身買斷）。所有付款、驗證、恢復購買與退款或撤銷同步皆由 Apple App Store 獨家處理，開發者不會取得你的付款卡資訊或 Apple 帳號密碼。</p><p>Apple 依其隱私權政策處理交易，並可能向開發者（Wang xiaohu）提供標準的 App Store 伺服器通知（ASSN V2）與彙總銷售報告，詳見 Apple 隱私權政策：<a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>。</p></section><section aria-labelledby="section-5"><h2 id="section-5">5. 版本檢查、原生評分、零廣告與零追蹤</h2><p>為提醒新版本發佈，應用程式於聯網狀態下至多每 24 小時一次（或手動點擊檢查更新時）向 Apple 公開介面（itunes.apple.com/lookup）查詢版本資訊，僅傳送 Bundle ID 與地區代碼，不含任何個人或營收資料。原生評分視窗（AppStore.requestReview）由 Apple 直接處理。</p><p>StudioPulse 不整合任何第三方廣告 SDK、統計分析 SDK 或跨 App 追蹤框架（NSPrivacyTracking = false），絕不販售或分享個人資料。Apple 可能依你的裝置診斷設定提供匿名彙總之當機與效能報告。</p><p>本隱私權網頁託管於 GitHub Pages，不含廣告、統計指令碼或我們設定的 Cookie；連線紀錄適用 GitHub 隱私權聲明：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>。</p></section><section aria-labelledby="section-6"><h2 id="section-6">6. 資料保存、刪除與聯絡我們</h2><p>所有本機金鑰、銷售帳本、榜單歷史、評論快取與小工具資料皆僅保存於你的裝置本機。你隨時可在應用程式內刪除工作室設定、註銷並刪除選用的雲端推播路由，或解除安裝應用程式以移除全部本機資料。</p><p>如有任何隱私疑問或技術支援需求，請透過技術支援網址 <a href="https://ai-topic.cn">https://ai-topic.cn</a> 聯繫開發者 Wang xiaohu，並註明涉及「StudioPulse」。請勿於來信中傳送 .p8 私鑰或其他敏感憑證。</p></section>
+<footer><a href="https://ai-topic.cn">技術支援與隱私聯繫</a><p>StudioPulse · Wang xiaohu</p></footer>
+</main></body>
+</html>
